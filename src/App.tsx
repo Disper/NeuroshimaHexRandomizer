@@ -1,0 +1,187 @@
+import { useState } from 'react';
+import { armies } from './data/armies';
+import type { Army } from './data/types';
+import { ArmyView } from './components/ArmyView';
+import { DeckSetup } from './components/DeckSetup';
+import { DrawMode } from './components/DrawMode';
+
+type Screen = 'home' | 'army' | 'setup' | 'draw';
+
+export default function App() {
+  const [screen, setScreen] = useState<Screen>('home');
+  const [selectedArmy, setSelectedArmy] = useState<Army | null>(null);
+  const [deckCode, setDeckCode] = useState<string>('');
+
+  const goHome = () => {
+    setScreen('home');
+    setSelectedArmy(null);
+    setDeckCode('');
+  };
+
+  const selectArmy = (army: Army) => {
+    setSelectedArmy(army);
+    setScreen('army');
+  };
+
+  const handleStartDraw = () => setScreen('setup');
+
+  const handleSetupStart = (code: string) => {
+    setDeckCode(code);
+    setScreen('draw');
+  };
+
+  return (
+    <div className="min-h-screen bg-stone-950">
+      {/* Nav bar */}
+      <header className="sticky top-0 z-20 border-b border-stone-800 bg-stone-950/90 backdrop-blur-sm">
+        <div className="max-w-4xl mx-auto px-4 h-14 flex items-center justify-between">
+          <button
+            onClick={goHome}
+            className="flex items-center gap-2 font-bold text-stone-100 hover:text-white transition-colors"
+          >
+            <span className="text-lg">🎲</span>
+            <span className="hidden sm:inline">Neuroshima Hex Randomizer</span>
+            <span className="sm:hidden">NH Randomizer</span>
+          </button>
+
+          {selectedArmy && (
+            <nav className="flex items-center gap-2 text-sm text-stone-500">
+              <button onClick={goHome} className="hover:text-stone-300 transition-colors">
+                Armies
+              </button>
+              <span>/</span>
+              <button
+                onClick={() => setScreen('army')}
+                className="hover:text-stone-300 transition-colors"
+                style={screen === 'army' ? { color: selectedArmy.accentColor } : undefined}
+              >
+                {selectedArmy.name}
+              </button>
+              {(screen === 'setup' || screen === 'draw') && (
+                <>
+                  <span>/</span>
+                  {screen === 'draw' ? (
+                    <>
+                      <button
+                        onClick={() => setScreen('setup')}
+                        className="hover:text-stone-300 transition-colors"
+                      >
+                        Setup
+                      </button>
+                      <span>/</span>
+                      <span style={{ color: selectedArmy.accentColor }}>Draw</span>
+                    </>
+                  ) : (
+                    <span style={{ color: selectedArmy.accentColor }}>Setup</span>
+                  )}
+                </>
+              )}
+            </nav>
+          )}
+        </div>
+      </header>
+
+      <main>
+        {screen === 'home' && (
+          <HomeScreen armies={armies} onSelectArmy={selectArmy} />
+        )}
+        {screen === 'army' && selectedArmy && (
+          <ArmyView army={selectedArmy} onStartDraw={handleStartDraw} />
+        )}
+        {screen === 'setup' && selectedArmy && (
+          <DeckSetup
+            army={selectedArmy}
+            onStart={handleSetupStart}
+            onBack={() => setScreen('army')}
+          />
+        )}
+        {screen === 'draw' && selectedArmy && deckCode && (
+          <DrawMode
+            army={selectedArmy}
+            deckCode={deckCode}
+            onBack={() => setScreen('army')}
+            onBackToSetup={() => setScreen('setup')}
+          />
+        )}
+      </main>
+    </div>
+  );
+}
+
+function HomeScreen({
+  armies,
+  onSelectArmy,
+}: {
+  armies: Army[];
+  onSelectArmy: (a: Army) => void;
+}) {
+  return (
+    <div className="max-w-4xl mx-auto px-4 py-12 space-y-10">
+      <div className="text-center space-y-3">
+        <h1 className="text-4xl sm:text-5xl font-extrabold text-stone-100 tracking-tight">
+          Neuroshima Hex
+          <br />
+          <span className="text-stone-400">Tile Randomizer</span>
+        </h1>
+        <p className="text-stone-500 text-base sm:text-lg max-w-md mx-auto leading-relaxed">
+          Browse army tile lists and draw tiles one by one using a shareable deck code —
+          so all players draw in the same order.
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {armies.map((army) => (
+          <ArmyCard key={army.id} army={army} onClick={() => onSelectArmy(army)} />
+        ))}
+        <div className="rounded-2xl border border-dashed border-stone-700 p-6 flex items-center justify-center text-stone-600 text-sm">
+          More armies coming soon…
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function ArmyCard({ army, onClick }: { army: Army; onClick: () => void }) {
+  const totalTiles = 1 + army.tiles.reduce((sum, t) => sum + t.count, 0);
+
+  return (
+    <button
+      onClick={onClick}
+      className="text-left rounded-2xl border border-stone-700 overflow-hidden transition-all duration-200 hover:border-stone-500 hover:scale-[1.02] active:scale-95 focus:outline-none focus:ring-2 focus:ring-white/20 group"
+      style={{ background: 'linear-gradient(135deg, #1c1917 0%, #292524 100%)' }}
+    >
+      <div className="h-1.5 w-full" style={{ background: army.accentColor }} />
+      <div className="p-5">
+        <div className="flex items-start justify-between gap-3">
+          <div>
+            <h2
+              className="text-xl font-bold tracking-tight group-hover:brightness-110 transition-all"
+              style={{ color: army.accentColor }}
+            >
+              {army.name}
+            </h2>
+            <p className="text-stone-400 text-sm mt-1 leading-relaxed line-clamp-3">
+              {army.description}
+            </p>
+          </div>
+          <div className="shrink-0 text-center">
+            <div className="text-3xl font-bold text-stone-100">{totalTiles}</div>
+            <div className="text-xs text-stone-500 uppercase tracking-wider">tiles</div>
+          </div>
+        </div>
+
+        <div className="mt-4 flex items-center gap-2 text-xs text-stone-500">
+          <span className="px-2 py-0.5 rounded bg-red-950/60 border border-red-500/30 text-red-400">
+            {army.tiles.filter((t) => t.category === 'instant').reduce((s, t) => s + t.count, 0)} instant
+          </span>
+          <span className="px-2 py-0.5 rounded bg-blue-950/60 border border-blue-500/30 text-blue-400">
+            {army.tiles.filter((t) => t.category === 'soldier').reduce((s, t) => s + t.count, 0)} soldiers
+          </span>
+          <span className="px-2 py-0.5 rounded bg-emerald-950/60 border border-emerald-500/30 text-emerald-400">
+            {army.tiles.filter((t) => t.category === 'module').reduce((s, t) => s + t.count, 0)} modules
+          </span>
+        </div>
+      </div>
+    </button>
+  );
+}
