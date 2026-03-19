@@ -9,12 +9,15 @@ import { borgo } from './borgo';
 import { outpost } from './outpost';
 import { hegemony } from './hegemony';
 import { mississippi } from './mississippi';
+import { newYork } from './newyork';
+import { smart } from './smart';
 import type { Army } from '../types';
 
 export const armies: Army[] = [
   moloch, wiremen, uranopolis, steelPolice,
   beasts, mephisto, pirates,
   borgo, outpost, hegemony, mississippi,
+  newYork, smart,
 ];
 
 export const getArmy = (id: string): Army | undefined =>
