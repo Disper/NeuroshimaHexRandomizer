@@ -11,13 +11,17 @@ import { hegemony } from './hegemony';
 import { mississippi } from './mississippi';
 import { newYork } from './newyork';
 import { smart } from './smart';
+import { neojungle } from './neojungle';
+import { vegas } from './vegas';
+import { dancer } from './dancer';
+import { sharrash } from './sharrash';
 import type { Army } from '../types';
 
 export const armies: Army[] = [
   moloch, wiremen, uranopolis, steelPolice,
   beasts, mephisto, pirates,
   borgo, outpost, hegemony, mississippi,
-  newYork, smart,
+  newYork, smart, neojungle, vegas, dancer, sharrash,
 ];
 
 export const getArmy = (id: string): Army | undefined =>
