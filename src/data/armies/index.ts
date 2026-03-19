@@ -16,6 +16,8 @@ import { vegas } from './vegas';
 import { dancer } from './dancer';
 import { sharrash } from './sharrash';
 import { sandRunners } from './sandrunners';
+import { ironGang } from './irongang';
+import { desertPeople } from './desertpeople';
 import type { Army } from '../types';
 
 export const armies: Army[] = [
@@ -23,7 +25,7 @@ export const armies: Army[] = [
   beasts, mephisto, pirates,
   borgo, outpost, hegemony, mississippi,
   newYork, smart, neojungle, vegas, dancer, sharrash,
-  sandRunners,
+  sandRunners, ironGang, desertPeople,
 ];
 
 export const getArmy = (id: string): Army | undefined =>
