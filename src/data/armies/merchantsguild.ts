@@ -1,6 +1,25 @@
 import type { Army } from '../types';
 
-const BASE = 'https://neuroshimahex.pl/gfx/gildiakupcow';
+import imgSztab from '../../assets/merchantsguild/gildiakupcow-sztab.jpg';
+import imgPlatnySnajper from '../../assets/merchantsguild/gildiakupcow-platny-snajper.jpg';
+import imgCzarnyRynek from '../../assets/merchantsguild/gildiakupcow-czarny-rynek.jpg';
+import imgRuch from '../../assets/merchantsguild/gildiakupcow-ruch.jpg';
+import imgBitwa from '../../assets/merchantsguild/gildiakupcow-bitwa.jpg';
+import imgStrateg from '../../assets/merchantsguild/gildiakupcow-strateg.jpg';
+import imgLapowkarz from '../../assets/merchantsguild/gildiakupcow-lapowkarz.jpg';
+import imgWybuchowyChris from '../../assets/merchantsguild/gildiakupcow-wybuchowy-chris.jpg';
+import imgKowalski from '../../assets/merchantsguild/gildiakupcow-kowalski.jpg';
+import imgCzarnaSkrzynka from '../../assets/merchantsguild/gildiakupcow-czarna-skrzynka.jpg';
+import imgRyzykant from '../../assets/merchantsguild/gildiakupcow-ryzykant.jpg';
+import imgLiderZwiadu from '../../assets/merchantsguild/gildiakupcow-lider-zwiadu.jpg';
+import imgHakerka from '../../assets/merchantsguild/gildiakupcow-hakerka.jpg';
+import imgCzolg from '../../assets/merchantsguild/gildiakupcow-czolg.jpg';
+import imgPiratDrogowy from '../../assets/merchantsguild/gildiakupcow-pirat-drogowy.jpg';
+import imgLowczyniGlow from '../../assets/merchantsguild/gildiakupcow-lowczyni-glow.jpg';
+import imgWiezyczkaZFotokomorka from '../../assets/merchantsguild/gildiakupcow-wiezyczka-z-fotokomorka.jpg';
+import imgZwiadowca from '../../assets/merchantsguild/gildiakupcow-zwiadowca.jpg';
+import imgKomander from '../../assets/merchantsguild/gildiakupcow-komander.jpg';
+import imgNaczelnik from '../../assets/merchantsguild/gildiakupcow-naczelnik.jpg';
 
 export const merchantsGuild: Army = {
   id: 'merchants-guild',
@@ -10,31 +29,31 @@ export const merchantsGuild: Army = {
   description:
     'A wealthy trading faction that buys victory. Merchants Guild fields Paid Snipers, Black Market, Explosive Chris, and Kowalski — backed by Commanders, Chiefs, and the unique Gamble mechanic for high-risk, high-reward plays.',
   hqAbility: 'All friendly adjacent units gain +1 to ranged attack strength.',
-  hqImageUrl: `${BASE}/gildiakupcow-sztab.jpg`,
+  hqImageUrl: imgSztab,
   tiles: [
     // Instant tokens
-    { id: 'mg-paid-sniper', name: 'Paid Sniper', category: 'instant', count: 1, imageUrl: `${BASE}/gildiakupcow-platny-snajper.jpg` },
-    { id: 'mg-black-market', name: 'Black Market', category: 'instant', count: 1, imageUrl: `${BASE}/gildiakupcow-czarny-rynek.jpg` },
-    { id: 'mg-move', name: 'Move', category: 'instant', count: 5, imageUrl: `${BASE}/gildiakupcow-ruch.jpg` },
-    { id: 'mg-battle', name: 'Battle', category: 'instant', count: 2, imageUrl: `${BASE}/gildiakupcow-bitwa.jpg` },
-    { id: 'mg-strategist', name: 'Strategist', category: 'instant', count: 1, imageUrl: `${BASE}/gildiakupcow-strateg.jpg` },
+    { id: 'mg-paid-sniper', name: 'Paid Sniper', category: 'instant', count: 1, imageUrl: imgPlatnySnajper },
+    { id: 'mg-black-market', name: 'Black Market', category: 'instant', count: 1, imageUrl: imgCzarnyRynek },
+    { id: 'mg-move', name: 'Move', category: 'instant', count: 5, imageUrl: imgRuch },
+    { id: 'mg-battle', name: 'Battle', category: 'instant', count: 2, imageUrl: imgBitwa },
+    { id: 'mg-strategist', name: 'Strategist', category: 'instant', count: 1, imageUrl: imgStrateg },
 
     // Soldiers
-    { id: 'mg-briber', name: 'Briber', category: 'soldier', count: 1, imageUrl: `${BASE}/gildiakupcow-lapowkarz.jpg` },
-    { id: 'mg-explosive-chris', name: 'Explosive Chris', category: 'soldier', count: 3, imageUrl: `${BASE}/gildiakupcow-wybuchowy-chris.jpg` },
-    { id: 'mg-kowalski', name: 'Kowalski', category: 'soldier', count: 2, imageUrl: `${BASE}/gildiakupcow-kowalski.jpg` },
-    { id: 'mg-black-box', name: 'Black Box', category: 'soldier', count: 2, imageUrl: `${BASE}/gildiakupcow-czarna-skrzynka.jpg` },
-    { id: 'mg-risk-taker', name: 'Risk Taker', category: 'soldier', count: 1, imageUrl: `${BASE}/gildiakupcow-ryzykant.jpg` },
-    { id: 'mg-squad-leader', name: 'Squad Leader', category: 'soldier', count: 2, imageUrl: `${BASE}/gildiakupcow-lider-zwiadu.jpg` },
-    { id: 'mg-hacker', name: 'Hacker', category: 'soldier', count: 1, imageUrl: `${BASE}/gildiakupcow-hakerka.jpg` },
-    { id: 'mg-tank', name: 'Tank', category: 'soldier', count: 1, imageUrl: `${BASE}/gildiakupcow-czolg.jpg` },
-    { id: 'mg-road-pirate', name: 'Road Pirate', category: 'soldier', count: 2, imageUrl: `${BASE}/gildiakupcow-pirat-drogowy.jpg` },
-    { id: 'mg-head-hunter', name: 'Head Hunter', category: 'soldier', count: 1, imageUrl: `${BASE}/gildiakupcow-lowczyni-glow.jpg` },
-    { id: 'mg-turret', name: 'Turret', category: 'soldier', count: 1, imageUrl: `${BASE}/gildiakupcow-wiezyczka-z-fotokomorka.jpg` },
+    { id: 'mg-briber', name: 'Briber', category: 'soldier', count: 1, imageUrl: imgLapowkarz },
+    { id: 'mg-explosive-chris', name: 'Explosive Chris', category: 'soldier', count: 3, imageUrl: imgWybuchowyChris },
+    { id: 'mg-kowalski', name: 'Kowalski', category: 'soldier', count: 2, imageUrl: imgKowalski },
+    { id: 'mg-black-box', name: 'Black Box', category: 'soldier', count: 2, imageUrl: imgCzarnaSkrzynka },
+    { id: 'mg-risk-taker', name: 'Risk Taker', category: 'soldier', count: 1, imageUrl: imgRyzykant },
+    { id: 'mg-squad-leader', name: 'Squad Leader', category: 'soldier', count: 2, imageUrl: imgLiderZwiadu },
+    { id: 'mg-hacker', name: 'Hacker', category: 'soldier', count: 1, imageUrl: imgHakerka },
+    { id: 'mg-tank', name: 'Tank', category: 'soldier', count: 1, imageUrl: imgCzolg },
+    { id: 'mg-road-pirate', name: 'Road Pirate', category: 'soldier', count: 2, imageUrl: imgPiratDrogowy },
+    { id: 'mg-head-hunter', name: 'Head Hunter', category: 'soldier', count: 1, imageUrl: imgLowczyniGlow },
+    { id: 'mg-turret', name: 'Turret', category: 'soldier', count: 1, imageUrl: imgWiezyczkaZFotokomorka },
 
     // Modules
-    { id: 'mg-scout', name: 'Scout', category: 'module', count: 1, imageUrl: `${BASE}/gildiakupcow-zwiadowca.jpg` },
-    { id: 'mg-commander', name: 'Commander', category: 'module', count: 2, imageUrl: `${BASE}/gildiakupcow-komander.jpg` },
-    { id: 'mg-chief', name: 'Chief', category: 'module', count: 4, imageUrl: `${BASE}/gildiakupcow-naczelnik.jpg` },
+    { id: 'mg-scout', name: 'Scout', category: 'module', count: 1, imageUrl: imgZwiadowca },
+    { id: 'mg-commander', name: 'Commander', category: 'module', count: 2, imageUrl: imgKomander },
+    { id: 'mg-chief', name: 'Chief', category: 'module', count: 4, imageUrl: imgNaczelnik },
   ],
 };

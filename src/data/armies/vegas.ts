@@ -1,6 +1,21 @@
 import type { Army } from '../types';
 
-const BASE = 'https://neuroshimahex.pl/gfx/vegas';
+import imgSztab from '../../assets/vegas/vegas-sztab.png';
+import imgBitwa from '../../assets/vegas/vegas-bitwa.png';
+import imgObrot from '../../assets/vegas/vegas-obrot.png';
+import imgOdepchniecie from '../../assets/vegas/vegas-odepchniecie.png';
+import imgRoszada from '../../assets/vegas/vegas-roszada.png';
+import imgRuch from '../../assets/vegas/vegas-ruch.png';
+import imgSnajper from '../../assets/vegas/vegas-snajper.png';
+import imgNajemnik from '../../assets/vegas/vegas-najemnik.png';
+import imgOchroniarz from '../../assets/vegas/vegas-ochroniarz.png';
+import imgStraznik from '../../assets/vegas/vegas-straznik.png';
+import imgStrzelec from '../../assets/vegas/vegas-strzelec.png';
+import imgAgitator from '../../assets/vegas/vegas-agitator.png';
+import imgDywersant from '../../assets/vegas/vegas-dywersant.png';
+import imgMedyk from '../../assets/vegas/vegas-medyk.png';
+import imgZwiadowca from '../../assets/vegas/vegas-zwiadowca.png';
+import imgMina from '../../assets/vegas/vegas-mina.png';
 
 export const vegas: Army = {
   id: 'vegas',
@@ -10,27 +25,27 @@ export const vegas: Army = {
   description:
     'A casino-run city-state where mercenaries and bodyguards enforce the house rules. Vegas excels at repositioning — Rotation, Castling, and Push tokens let it shuffle the board, while Agitators and Shooters apply pressure.',
   hqAbility: 'All friendly adjacent units gain +1 to all attacks.',
-  hqImageUrl: `${BASE}/vegas-sztab.png`,
+  hqImageUrl: imgSztab,
   tiles: [
     // Instant tokens
-    { id: 'vegas-battle', name: 'Battle', category: 'instant', count: 5, imageUrl: `${BASE}/vegas-bitwa.png` },
-    { id: 'vegas-rotation', name: 'Rotation', category: 'instant', count: 3, imageUrl: `${BASE}/vegas-obrot.png` },
-    { id: 'vegas-push', name: 'Push', category: 'instant', count: 3, imageUrl: `${BASE}/vegas-odepchniecie.png` },
-    { id: 'vegas-castling', name: 'Castling', category: 'instant', count: 2, imageUrl: `${BASE}/vegas-roszada.png` },
-    { id: 'vegas-move', name: 'Move', category: 'instant', count: 3, imageUrl: `${BASE}/vegas-ruch.png` },
-    { id: 'vegas-sniper', name: 'Sniper', category: 'instant', count: 1, imageUrl: `${BASE}/vegas-snajper.png` },
+    { id: 'vegas-battle', name: 'Battle', category: 'instant', count: 5, imageUrl: imgBitwa },
+    { id: 'vegas-rotation', name: 'Rotation', category: 'instant', count: 3, imageUrl: imgObrot },
+    { id: 'vegas-push', name: 'Push', category: 'instant', count: 3, imageUrl: imgOdepchniecie },
+    { id: 'vegas-castling', name: 'Castling', category: 'instant', count: 2, imageUrl: imgRoszada },
+    { id: 'vegas-move', name: 'Move', category: 'instant', count: 3, imageUrl: imgRuch },
+    { id: 'vegas-sniper', name: 'Sniper', category: 'instant', count: 1, imageUrl: imgSnajper },
 
     // Soldiers
-    { id: 'vegas-mercenary', name: 'Mercenary', category: 'soldier', count: 2, imageUrl: `${BASE}/vegas-najemnik.png` },
-    { id: 'vegas-bodyguard', name: 'Bodyguard', category: 'soldier', count: 2, imageUrl: `${BASE}/vegas-ochroniarz.png` },
-    { id: 'vegas-guardian', name: 'Guardian', category: 'soldier', count: 2, imageUrl: `${BASE}/vegas-straznik.png` },
-    { id: 'vegas-shooter', name: 'Shooter', category: 'soldier', count: 2, imageUrl: `${BASE}/vegas-strzelec.png` },
+    { id: 'vegas-mercenary', name: 'Mercenary', category: 'soldier', count: 2, imageUrl: imgNajemnik },
+    { id: 'vegas-bodyguard', name: 'Bodyguard', category: 'soldier', count: 2, imageUrl: imgOchroniarz },
+    { id: 'vegas-guardian', name: 'Guardian', category: 'soldier', count: 2, imageUrl: imgStraznik },
+    { id: 'vegas-shooter', name: 'Shooter', category: 'soldier', count: 2, imageUrl: imgStrzelec },
 
     // Modules
-    { id: 'vegas-agitator', name: 'Agitator', category: 'module', count: 3, imageUrl: `${BASE}/vegas-agitator.png` },
-    { id: 'vegas-saboteur', name: 'Saboteur', category: 'module', count: 1, imageUrl: `${BASE}/vegas-dywersant.png` },
-    { id: 'vegas-medic', name: 'Medic', category: 'module', count: 1, imageUrl: `${BASE}/vegas-medyk.png` },
-    { id: 'vegas-scout', name: 'Scout', category: 'module', count: 2, imageUrl: `${BASE}/vegas-zwiadowca.png` },
-    { id: 'vegas-mine', name: 'Mine', category: 'module', count: 2, imageUrl: `${BASE}/vegas-mina.png` },
+    { id: 'vegas-agitator', name: 'Agitator', category: 'module', count: 3, imageUrl: imgAgitator },
+    { id: 'vegas-saboteur', name: 'Saboteur', category: 'module', count: 1, imageUrl: imgDywersant },
+    { id: 'vegas-medic', name: 'Medic', category: 'module', count: 1, imageUrl: imgMedyk },
+    { id: 'vegas-scout', name: 'Scout', category: 'module', count: 2, imageUrl: imgZwiadowca },
+    { id: 'vegas-mine', name: 'Mine', category: 'module', count: 2, imageUrl: imgMina },
   ],
 };

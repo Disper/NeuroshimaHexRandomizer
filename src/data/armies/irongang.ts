@@ -1,6 +1,16 @@
 import type { Army } from '../types';
 
-const BASE = 'https://neuroshimahex.pl/gfx/irongang';
+import imgSztab from '../../assets/irongang/irongang-sztab.png';
+import imgPodwojnyruch from '../../assets/irongang/irongang-podwojnyruch.png';
+import imgRozkaz from '../../assets/irongang/irongang-rozkaz.png';
+import imgFanatyk from '../../assets/irongang/irongang-fanatyk.png';
+import imgSieciarzdystansowy from '../../assets/irongang/irongang-sieciarzdystansowy.png';
+import imgDrwal from '../../assets/irongang/irongang-drwal.png';
+import imgGora from '../../assets/irongang/irongang-gora.png';
+import imgMotocyklista from '../../assets/irongang/irongang-motocyklista.png';
+import imgOficer from '../../assets/irongang/irongang-oficer.png';
+import imgSzef from '../../assets/irongang/irongang-szef.png';
+import imgHak from '../../assets/irongang/irongang-hak.jpg';
 
 export const ironGang: Army = {
   id: 'iron-gang',
@@ -10,22 +20,22 @@ export const ironGang: Army = {
   description:
     'A biker gang that rules the roads with brute force and mobility. Iron Gang fields Lumberjacks, Mountains, and Motorcyclists, backed by the unique Order token — the most versatile instant in the game, with nine copies.',
   hqAbility: 'All friendly adjacent units gain +1 melee attack strength.',
-  hqImageUrl: `${BASE}/irongang-sztab.png`,
+  hqImageUrl: imgSztab,
   tiles: [
     // Instant tokens
-    { id: 'ig-double-move', name: 'Double Move', category: 'instant', count: 2, imageUrl: `${BASE}/irongang-podwojnyruch.png` },
-    { id: 'ig-order', name: 'Order', category: 'instant', count: 9, imageUrl: `${BASE}/irongang-rozkaz.png` },
+    { id: 'ig-double-move', name: 'Double Move', category: 'instant', count: 2, imageUrl: imgPodwojnyruch },
+    { id: 'ig-order', name: 'Order', category: 'instant', count: 9, imageUrl: imgRozkaz },
 
     // Soldiers
-    { id: 'ig-fanatic', name: 'Fanatic', category: 'soldier', count: 3, imageUrl: `${BASE}/irongang-fanatyk.png` },
-    { id: 'ig-ranged-netter', name: 'Ranged Netter', category: 'soldier', count: 3, imageUrl: `${BASE}/irongang-sieciarzdystansowy.png` },
-    { id: 'ig-lumberjack', name: 'Lumberjack', category: 'soldier', count: 5, imageUrl: `${BASE}/irongang-drwal.png` },
-    { id: 'ig-mountain', name: 'Mountain', category: 'soldier', count: 3, imageUrl: `${BASE}/irongang-gora.png` },
-    { id: 'ig-motorcyclist', name: 'Motorcyclist', category: 'soldier', count: 4, imageUrl: `${BASE}/irongang-motocyklista.png` },
+    { id: 'ig-fanatic', name: 'Fanatic', category: 'soldier', count: 3, imageUrl: imgFanatyk },
+    { id: 'ig-ranged-netter', name: 'Ranged Netter', category: 'soldier', count: 3, imageUrl: imgSieciarzdystansowy },
+    { id: 'ig-lumberjack', name: 'Lumberjack', category: 'soldier', count: 5, imageUrl: imgDrwal },
+    { id: 'ig-mountain', name: 'Mountain', category: 'soldier', count: 3, imageUrl: imgGora },
+    { id: 'ig-motorcyclist', name: 'Motorcyclist', category: 'soldier', count: 4, imageUrl: imgMotocyklista },
 
     // Modules
-    { id: 'ig-officer', name: 'Officer', category: 'module', count: 4, imageUrl: `${BASE}/irongang-oficer.png` },
-    { id: 'ig-boss', name: 'Boss', category: 'module', count: 1, imageUrl: `${BASE}/irongang-szef.png` },
-    { id: 'ig-hook', name: 'Hook', category: 'module', count: 1, imageUrl: `${BASE}/irongang-hak.jpg` },
+    { id: 'ig-officer', name: 'Officer', category: 'module', count: 4, imageUrl: imgOficer },
+    { id: 'ig-boss', name: 'Boss', category: 'module', count: 1, imageUrl: imgSzef },
+    { id: 'ig-hook', name: 'Hook', category: 'module', count: 1, imageUrl: imgHak },
   ],
 };

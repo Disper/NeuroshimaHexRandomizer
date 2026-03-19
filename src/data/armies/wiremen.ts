@@ -1,6 +1,17 @@
 import type { Army } from '../types';
 
-const BASE = 'https://neuroshimahex.pl/gfx/druciarze';
+// Wiremen HQ and soldier images
+import imgSztab from '../../assets/wiremen/druciarze-sztab.jpg';
+import imgSentinel from '../../assets/wiremen/druciarze-sentinel.jpg';
+import imgZabojcaMaszyn from '../../assets/wiremen/druciarze-zabojca-maszyn.jpg';
+import imgPsychocyborg from '../../assets/wiremen/druciarze-psychocyborg.jpg';
+import imgSkorpion from '../../assets/wiremen/druciarze-skorpion.jpg';
+import imgTetra from '../../assets/wiremen/druciarze-tetra.jpg';
+import imgOsa from '../../assets/wiremen/druciarze-osa.jpg';
+import imgPlaczka from '../../assets/wiremen/druciarze-placzka.jpg';
+import imgZolnierzUmo from '../../assets/wiremen/druciarze-zolnierz-umo.jpg';
+import imgError from '../../assets/wiremen/druciarze-error.jpg';
+import imgDruciarz from '../../assets/wiremen/druciarze-druciarz.jpg';
 
 // Wiremen instant/Technology tokens — each has a unique ability and image
 import sniperImg from '../../assets/wiremen/HEX_wiremen_TECH_snajper.png';
@@ -28,7 +39,7 @@ export const wiremen: Army = {
     'A community of rebels living inside Moloch itself — rogue cyborgs, escaped mutants, researchers and survivors. They fight using stolen Machine resources and cutting-edge cybernetics, blurring the line between friend and foe.',
   hqAbility:
     'Inspirator — once per turn the Wiremen player may place an Inspiration marker on any Technology token.',
-  hqImageUrl: `${BASE}/druciarze-sztab.jpg`,
+  hqImageUrl: imgSztab,
   tiles: [
     // Instant / Technology tokens — each unique (dual-purpose: instant or Technology field)
     { id: 'wiremen-sniper', name: 'Sniper', category: 'instant', count: 1, imageUrl: sniperImg },
@@ -53,70 +64,70 @@ export const wiremen: Army = {
       name: 'Sentinel',
       category: 'soldier',
       count: 1,
-      imageUrl: `${BASE}/druciarze-sentinel.jpg`,
+      imageUrl: imgSentinel,
     },
     {
       id: 'wiremen-machine-killer',
       name: 'Machine Killer',
       category: 'soldier',
       count: 2,
-      imageUrl: `${BASE}/druciarze-zabojca-maszyn.jpg`,
+      imageUrl: imgZabojcaMaszyn,
     },
     {
       id: 'wiremen-psychocyborg',
       name: 'Psychocyborg',
       category: 'soldier',
       count: 2,
-      imageUrl: `${BASE}/druciarze-psychocyborg.jpg`,
+      imageUrl: imgPsychocyborg,
     },
     {
       id: 'wiremen-scorpion',
       name: 'Scorpion',
       category: 'soldier',
       count: 2,
-      imageUrl: `${BASE}/druciarze-skorpion.jpg`,
+      imageUrl: imgSkorpion,
     },
     {
       id: 'wiremen-tetra',
       name: 'Tetra',
       category: 'soldier',
       count: 3,
-      imageUrl: `${BASE}/druciarze-tetra.jpg`,
+      imageUrl: imgTetra,
     },
     {
       id: 'wiremen-wasp',
       name: 'Wasp',
       category: 'soldier',
       count: 2,
-      imageUrl: `${BASE}/druciarze-osa.jpg`,
+      imageUrl: imgOsa,
     },
     {
       id: 'wiremen-weeper',
       name: 'Weeper',
       category: 'soldier',
       count: 3,
-      imageUrl: `${BASE}/druciarze-placzka.jpg`,
+      imageUrl: imgPlaczka,
     },
     {
       id: 'wiremen-umo-soldier',
       name: 'UMO Soldier',
       category: 'soldier',
       count: 2,
-      imageUrl: `${BASE}/druciarze-zolnierz-umo.jpg`,
+      imageUrl: imgZolnierzUmo,
     },
     {
       id: 'wiremen-error',
       name: 'Error',
       category: 'soldier',
       count: 1,
-      imageUrl: `${BASE}/druciarze-error.jpg`,
+      imageUrl: imgError,
     },
     {
       id: 'wiremen-wireman',
       name: 'Wireman',
       category: 'soldier',
       count: 1,
-      imageUrl: `${BASE}/druciarze-druciarz.jpg`,
+      imageUrl: imgDruciarz,
     },
   ],
 };

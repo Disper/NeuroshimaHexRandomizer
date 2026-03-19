@@ -1,6 +1,19 @@
 import type { Army } from '../types';
 
-const BASE = 'https://neuroshimahex.pl/gfx/borgo';
+import imgSztab from '../../assets/borgo/borgo-sztab.png';
+import imgBitwa from '../../assets/borgo/borgo-bitwa.png';
+import imgRuch from '../../assets/borgo/borgo-ruch.png';
+import imgGranat from '../../assets/borgo/borgo-granat.png';
+import imgMutek from '../../assets/borgo/borgo-mutek.png';
+import imgNozownik from '../../assets/borgo/borgo-nozownik.png';
+import imgSieciarz from '../../assets/borgo/borgo-sieciarz.png';
+import imgSupermutant from '../../assets/borgo/borgo-supermutant.png';
+import imgSilacz from '../../assets/borgo/borgo-silacz.png';
+import imgZabojca from '../../assets/borgo/borgo-zabojca.png';
+import imgMedyk from '../../assets/borgo/borgo-medyk.png';
+import imgOficer from '../../assets/borgo/borgo-oficer.png';
+import imgSuperoficer from '../../assets/borgo/borgo-superoficer.png';
+import imgZwiadowca from '../../assets/borgo/borgo-zwiadowca.png';
 
 export const borgo: Army = {
   id: 'borgo',
@@ -10,25 +23,25 @@ export const borgo: Army = {
   description:
     'A savage mutant gang led by the towering Super-mutant. Borgo floods the board with cheap, aggressive fighters and overwhelms enemies through sheer numbers, backed by the highest Battle token count in the game.',
   hqAbility: 'All friendly adjacent units gain +1 melee attack strength.',
-  hqImageUrl: `${BASE}/borgo-sztab.png`,
+  hqImageUrl: imgSztab,
   tiles: [
     // Instant tokens
-    { id: 'borgo-battle', name: 'Battle', category: 'instant', count: 6, imageUrl: `${BASE}/borgo-bitwa.png` },
-    { id: 'borgo-move', name: 'Move', category: 'instant', count: 4, imageUrl: `${BASE}/borgo-ruch.png` },
-    { id: 'borgo-grenade', name: 'Grenade', category: 'instant', count: 1, imageUrl: `${BASE}/borgo-granat.png` },
+    { id: 'borgo-battle', name: 'Battle', category: 'instant', count: 6, imageUrl: imgBitwa },
+    { id: 'borgo-move', name: 'Move', category: 'instant', count: 4, imageUrl: imgRuch },
+    { id: 'borgo-grenade', name: 'Grenade', category: 'instant', count: 1, imageUrl: imgGranat },
 
     // Soldiers
-    { id: 'borgo-mutek', name: 'Mutek', category: 'soldier', count: 6, imageUrl: `${BASE}/borgo-mutek.png` },
-    { id: 'borgo-knifer', name: 'Knifer', category: 'soldier', count: 4, imageUrl: `${BASE}/borgo-nozownik.png` },
-    { id: 'borgo-netter', name: 'Netter', category: 'soldier', count: 2, imageUrl: `${BASE}/borgo-sieciarz.png` },
-    { id: 'borgo-super-mutant', name: 'Super-mutant', category: 'soldier', count: 1, imageUrl: `${BASE}/borgo-supermutant.png` },
-    { id: 'borgo-strongman', name: 'Strongman', category: 'soldier', count: 2, imageUrl: `${BASE}/borgo-silacz.png` },
-    { id: 'borgo-assassin', name: 'Assassin', category: 'soldier', count: 2, imageUrl: `${BASE}/borgo-zabojca.png` },
+    { id: 'borgo-mutek', name: 'Mutek', category: 'soldier', count: 6, imageUrl: imgMutek },
+    { id: 'borgo-knifer', name: 'Knifer', category: 'soldier', count: 4, imageUrl: imgNozownik },
+    { id: 'borgo-netter', name: 'Netter', category: 'soldier', count: 2, imageUrl: imgSieciarz },
+    { id: 'borgo-super-mutant', name: 'Super-mutant', category: 'soldier', count: 1, imageUrl: imgSupermutant },
+    { id: 'borgo-strongman', name: 'Strongman', category: 'soldier', count: 2, imageUrl: imgSilacz },
+    { id: 'borgo-assassin', name: 'Assassin', category: 'soldier', count: 2, imageUrl: imgZabojca },
 
     // Modules
-    { id: 'borgo-medic', name: 'Medic', category: 'module', count: 1, imageUrl: `${BASE}/borgo-medyk.png` },
-    { id: 'borgo-officer', name: 'Officer', category: 'module', count: 2, imageUrl: `${BASE}/borgo-oficer.png` },
-    { id: 'borgo-super-officer', name: 'Super-officer', category: 'module', count: 1, imageUrl: `${BASE}/borgo-superoficer.png` },
-    { id: 'borgo-scout', name: 'Scout', category: 'module', count: 2, imageUrl: `${BASE}/borgo-zwiadowca.png` },
+    { id: 'borgo-medic', name: 'Medic', category: 'module', count: 1, imageUrl: imgMedyk },
+    { id: 'borgo-officer', name: 'Officer', category: 'module', count: 2, imageUrl: imgOficer },
+    { id: 'borgo-super-officer', name: 'Super-officer', category: 'module', count: 1, imageUrl: imgSuperoficer },
+    { id: 'borgo-scout', name: 'Scout', category: 'module', count: 2, imageUrl: imgZwiadowca },
   ],
 };

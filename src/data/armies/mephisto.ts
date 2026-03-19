@@ -1,6 +1,23 @@
 import type { Army } from '../types';
 
-const BASE = 'https://neuroshimahex.pl/gfx/mephisto';
+import imgSztab from '../../assets/mephisto/mephisto-sztab.png';
+import imgRoszada from '../../assets/mephisto/mephisto-roszada.png';
+import imgBitwa from '../../assets/mephisto/mephisto-bitwa.png';
+import imgRuch from '../../assets/mephisto/mephisto-ruch.png';
+import imgInkubator from '../../assets/mephisto/mephisto-inkubator.png';
+import imgTransmiter from '../../assets/mephisto/mephisto-transmiter.png';
+import imgSzczeki from '../../assets/mephisto/mephisto-szczeki.png';
+import imgOgon from '../../assets/mephisto/mephisto-ogon.png';
+import imgKoleclewy from '../../assets/mephisto/mephisto-koleclewy.png';
+import imgKolecprawy from '../../assets/mephisto/mephisto-kolecprawy.png';
+import imgMacki from '../../assets/mephisto/mephisto-macki.png';
+import imgOdnoza from '../../assets/mephisto/mephisto-odnoza.png';
+import imgSwider from '../../assets/mephisto/mephisto-swider.png';
+import imgWzmacniacz from '../../assets/mephisto/mephisto-wzmacniacz.png';
+import imgSonda from '../../assets/mephisto/mephisto-sonda.png';
+import imgPaszcza from '../../assets/mephisto/mephisto-paszcza.png';
+import imgSzpon from '../../assets/mephisto/mephisto-szpon.png';
+import imgAkcelerator from '../../assets/mephisto/mephisto-akcelerator.png';
 
 export const mephisto: Army = {
   id: 'mephisto',
@@ -10,29 +27,29 @@ export const mephisto: Army = {
   description:
     'A colossal bio-mechanical demon assembled from interchangeable body parts. Mephisto\'s tiles are its own limbs and organs — each one a combat piece that snaps onto the growing creature on the board.',
   hqAbility: 'All friendly adjacent units with a melee attack gain +1 to that attack.',
-  hqImageUrl: `${BASE}/mephisto-sztab.png`,
+  hqImageUrl: imgSztab,
   tiles: [
     // Instant tokens
-    { id: 'mephisto-castling', name: 'Castling', category: 'instant', count: 2, imageUrl: `${BASE}/mephisto-roszada.png` },
-    { id: 'mephisto-battle', name: 'Battle', category: 'instant', count: 3, imageUrl: `${BASE}/mephisto-bitwa.png` },
-    { id: 'mephisto-move', name: 'Move', category: 'instant', count: 2, imageUrl: `${BASE}/mephisto-ruch.png` },
+    { id: 'mephisto-castling', name: 'Castling', category: 'instant', count: 2, imageUrl: imgRoszada },
+    { id: 'mephisto-battle', name: 'Battle', category: 'instant', count: 3, imageUrl: imgBitwa },
+    { id: 'mephisto-move', name: 'Move', category: 'instant', count: 2, imageUrl: imgRuch },
 
     // Soldiers (body parts / combat units)
-    { id: 'mephisto-incubator', name: 'Incubator', category: 'soldier', count: 3, imageUrl: `${BASE}/mephisto-inkubator.png` },
-    { id: 'mephisto-transmitter', name: 'Transmitter', category: 'soldier', count: 1, imageUrl: `${BASE}/mephisto-transmiter.png` },
-    { id: 'mephisto-jaws', name: 'Jaws', category: 'soldier', count: 2, imageUrl: `${BASE}/mephisto-szczeki.png` },
-    { id: 'mephisto-tail', name: 'Tail', category: 'soldier', count: 2, imageUrl: `${BASE}/mephisto-ogon.png` },
-    { id: 'mephisto-left-spike', name: 'Left Spike', category: 'soldier', count: 1, imageUrl: `${BASE}/mephisto-koleclewy.png` },
-    { id: 'mephisto-right-spike', name: 'Right Spike', category: 'soldier', count: 1, imageUrl: `${BASE}/mephisto-kolecprawy.png` },
-    { id: 'mephisto-tentacles', name: 'Tentacles', category: 'soldier', count: 2, imageUrl: `${BASE}/mephisto-macki.png` },
-    { id: 'mephisto-appendages', name: 'Appendages', category: 'soldier', count: 2, imageUrl: `${BASE}/mephisto-odnoza.png` },
-    { id: 'mephisto-drill', name: 'Drill', category: 'soldier', count: 1, imageUrl: `${BASE}/mephisto-swider.png` },
+    { id: 'mephisto-incubator', name: 'Incubator', category: 'soldier', count: 3, imageUrl: imgInkubator },
+    { id: 'mephisto-transmitter', name: 'Transmitter', category: 'soldier', count: 1, imageUrl: imgTransmiter },
+    { id: 'mephisto-jaws', name: 'Jaws', category: 'soldier', count: 2, imageUrl: imgSzczeki },
+    { id: 'mephisto-tail', name: 'Tail', category: 'soldier', count: 2, imageUrl: imgOgon },
+    { id: 'mephisto-left-spike', name: 'Left Spike', category: 'soldier', count: 1, imageUrl: imgKoleclewy },
+    { id: 'mephisto-right-spike', name: 'Right Spike', category: 'soldier', count: 1, imageUrl: imgKolecprawy },
+    { id: 'mephisto-tentacles', name: 'Tentacles', category: 'soldier', count: 2, imageUrl: imgMacki },
+    { id: 'mephisto-appendages', name: 'Appendages', category: 'soldier', count: 2, imageUrl: imgOdnoza },
+    { id: 'mephisto-drill', name: 'Drill', category: 'soldier', count: 1, imageUrl: imgSwider },
 
     // Modules
-    { id: 'mephisto-amplifier', name: 'Amplifier', category: 'module', count: 2, imageUrl: `${BASE}/mephisto-wzmacniacz.png` },
-    { id: 'mephisto-probe', name: 'Probe', category: 'module', count: 2, imageUrl: `${BASE}/mephisto-sonda.png` },
-    { id: 'mephisto-maw', name: 'Maw', category: 'module', count: 1, imageUrl: `${BASE}/mephisto-paszcza.png` },
-    { id: 'mephisto-claw', name: 'Claw', category: 'module', count: 4, imageUrl: `${BASE}/mephisto-szpon.png` },
-    { id: 'mephisto-accelerator', name: 'Accelerator', category: 'module', count: 3, imageUrl: `${BASE}/mephisto-akcelerator.png` },
+    { id: 'mephisto-amplifier', name: 'Amplifier', category: 'module', count: 2, imageUrl: imgWzmacniacz },
+    { id: 'mephisto-probe', name: 'Probe', category: 'module', count: 2, imageUrl: imgSonda },
+    { id: 'mephisto-maw', name: 'Maw', category: 'module', count: 1, imageUrl: imgPaszcza },
+    { id: 'mephisto-claw', name: 'Claw', category: 'module', count: 4, imageUrl: imgSzpon },
+    { id: 'mephisto-accelerator', name: 'Accelerator', category: 'module', count: 3, imageUrl: imgAkcelerator },
   ],
 };
