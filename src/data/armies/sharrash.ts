@@ -33,7 +33,7 @@ export const sharrash: Army = {
     { id: 'sharrash-battle', name: 'Battle', category: 'instant', count: 5, imageUrl: imgBitwa },
     { id: 'sharrash-move', name: 'Move', category: 'instant', count: 2, imageUrl: imgRuch },
     { id: 'sharrash-paralysis', name: 'Paralysis', category: 'instant', count: 1, imageUrl: imgParaliz },
-    { id: 'sharrash-plague', name: 'Plague', category: 'instant', count: 2, imageUrl: imgPlaga },
+    { id: 'sharrash-plague', name: 'Plague', category: 'soldier', count: 2, imageUrl: imgPlaga },
 
     // Soldiers
     { id: 'sharrash-beast', name: 'Beast', category: 'soldier', count: 1, imageUrl: imgBestia },
@@ -41,8 +41,8 @@ export const sharrash: Army = {
     { id: 'sharrash-rats', name: 'Rats', category: 'soldier', count: 3, imageUrl: imgSzczury },
     { id: 'sharrash-mortar', name: 'Mortar', category: 'soldier', count: 3, imageUrl: imgMozdzierz },
     { id: 'sharrash-demolition-charge', name: 'Demolition Charge', category: 'soldier', count: 4, imageUrl: imgLadunekwybuchowy },
-    { id: 'sharrash-underground', name: 'Underground', category: 'soldier', count: 1, imageUrl: imgPodziemia },
-    { id: 'sharrash-dump', name: 'Dump', category: 'soldier', count: 1, imageUrl: imgSmietnisko },
+    { id: 'sharrash-underground', name: 'Underground', category: 'module', count: 1, imageUrl: imgPodziemia },
+    { id: 'sharrash-dump', name: 'Dump', category: 'module', count: 1, imageUrl: imgSmietnisko },
 
     // Modules
     { id: 'sharrash-mother', name: 'Mother', category: 'module', count: 1, imageUrl: imgMatka },

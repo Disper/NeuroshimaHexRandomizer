@@ -113,7 +113,7 @@ export const steelPolice: Army = {
     {
       id: 'sp-steel-net-launcher',
       name: 'Steel Net Launcher',
-      category: 'soldier',
+      category: 'module',
       count: 1,
       imageUrl: imgWyrzutniastalowejsieci,
     },

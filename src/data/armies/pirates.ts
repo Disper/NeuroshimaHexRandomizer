@@ -32,7 +32,7 @@ export const pirates: Army = {
     { id: 'pirates-battle', name: 'Battle', category: 'instant', count: 5, imageUrl: imgBitwa },
     { id: 'pirates-move', name: 'Move', category: 'instant', count: 3, imageUrl: imgRuch },
     { id: 'pirates-wave', name: 'Wave', category: 'instant', count: 1, imageUrl: imgFala },
-    { id: 'pirates-tavern', name: 'Tavern', category: 'instant', count: 1, imageUrl: imgTawerna },
+    { id: 'pirates-tavern', name: 'Tavern', category: 'module', count: 1, imageUrl: imgTawerna },
 
     // Soldiers
     { id: 'pirates-motorboat', name: 'Motorboat', category: 'soldier', count: 2, imageUrl: imgMotorowka },

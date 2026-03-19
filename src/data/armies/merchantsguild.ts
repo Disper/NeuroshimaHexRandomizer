@@ -36,7 +36,7 @@ export const merchantsGuild: Army = {
     { id: 'mg-black-market', name: 'Black Market', category: 'instant', count: 1, imageUrl: imgCzarnyRynek },
     { id: 'mg-move', name: 'Move', category: 'instant', count: 5, imageUrl: imgRuch },
     { id: 'mg-battle', name: 'Battle', category: 'instant', count: 2, imageUrl: imgBitwa },
-    { id: 'mg-strategist', name: 'Strategist', category: 'instant', count: 1, imageUrl: imgStrateg },
+    { id: 'mg-strategist', name: 'Strategist', category: 'soldier', count: 1, imageUrl: imgStrateg },
 
     // Soldiers
     { id: 'mg-briber', name: 'Briber', category: 'soldier', count: 1, imageUrl: imgLapowkarz },

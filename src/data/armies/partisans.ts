@@ -35,7 +35,7 @@ export const partisans: Army = {
     { id: 'part-battle', name: 'Battle', category: 'instant', count: 5, imageUrl: imgBitwa },
 
     // Soldiers
-    { id: 'part-bunker-manager', name: 'Bunker Manager', category: 'soldier', count: 1, imageUrl: imgZarzadcaBunkra },
+    { id: 'part-bunker-manager', name: 'Bunker Manager', category: 'module', count: 1, imageUrl: imgZarzadcaBunkra },
     { id: 'part-sleeper-agent', name: 'Sleeper Agent', category: 'soldier', count: 2, imageUrl: imgUspionyAgent },
     { id: 'part-doctor-assistant', name: 'Doctor Assistant', category: 'soldier', count: 2, imageUrl: imgAsystentkaDoktora },
     { id: 'part-guard-drone', name: 'Guard Drone', category: 'soldier', count: 1, imageUrl: imgDronStraznik },

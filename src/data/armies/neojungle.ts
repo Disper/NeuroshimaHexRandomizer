@@ -43,7 +43,7 @@ export const neojungle: Army = {
     { id: 'nj-tree-wall', name: 'Tree Wall', category: 'soldier', count: 1, imageUrl: imgScianadrzew },
     { id: 'nj-netter', name: 'Netter', category: 'soldier', count: 3, imageUrl: imgSieciarz },
     { id: 'nj-tangle', name: 'Tangle', category: 'soldier', count: 2, imageUrl: imgKlebowisko },
-    { id: 'nj-vine', name: 'Vine', category: 'soldier', count: 1, imageUrl: imgPnacza },
+    { id: 'nj-vine', name: 'Vine', category: 'module', count: 1, imageUrl: imgPnacza },
 
     // Modules
     { id: 'nj-medic', name: 'Medic', category: 'module', count: 3, imageUrl: imgMedyk },

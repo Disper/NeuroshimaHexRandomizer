@@ -43,7 +43,7 @@ export const mississippi: Army = {
     { id: 'ms-guardian', name: 'Guardian', category: 'soldier', count: 4, imageUrl: imgStraznik },
     { id: 'ms-assassin', name: 'Assassin', category: 'soldier', count: 1, imageUrl: imgSkrytobojca },
     { id: 'ms-netter', name: 'Netter', category: 'soldier', count: 1, imageUrl: imgSieciarz },
-    { id: 'ms-paralysis', name: 'Paralysis', category: 'soldier', count: 2, imageUrl: imgParaliz },
+    { id: 'ms-paralysis', name: 'Paralysis', category: 'module', count: 2, imageUrl: imgParaliz },
 
     // Modules
     { id: 'ms-medic', name: 'Medic', category: 'module', count: 2, imageUrl: imgMedyk },
