@@ -18,6 +18,11 @@ import { sharrash } from './sharrash';
 import { sandRunners } from './sandrunners';
 import { ironGang } from './irongang';
 import { desertPeople } from './desertpeople';
+import { troglodytes } from './troglodytes';
+import { partisans } from './partisans';
+import { merchantsGuild } from './merchantsguild';
+import { deathBreath } from './deathbreath';
+import { doomsdayMachine } from './doomsdaymachine';
 import type { Army } from '../types';
 
 export const armies: Army[] = [
@@ -26,6 +31,7 @@ export const armies: Army[] = [
   borgo, outpost, hegemony, mississippi,
   newYork, smart, neojungle, vegas, dancer, sharrash,
   sandRunners, ironGang, desertPeople,
+  troglodytes, partisans, merchantsGuild, deathBreath, doomsdayMachine,
 ];
 
 export const getArmy = (id: string): Army | undefined =>
