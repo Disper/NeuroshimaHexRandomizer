@@ -45,7 +45,7 @@ export const smart: Army = {
     { id: 'smart-bio-droid', name: 'Bio-droid', category: 'soldier', count: 1, imageUrl: imgBiodroid },
 
     // Modules
-    { id: 'smart-transporter', name: 'Transporter', category: 'module', count: 3, imageUrl: imgTransporter },
+    { id: 'smart-transporter', name: 'Transporter', category: 'soldier', count: 3, imageUrl: imgTransporter },
     { id: 'smart-officer', name: 'Officer', category: 'module', count: 4, imageUrl: imgOficer },
     { id: 'smart-mother', name: 'Mother', category: 'module', count: 2, imageUrl: imgMatka },
     { id: 'smart-scout', name: 'Scout', category: 'module', count: 2, imageUrl: imgZwiadowca },

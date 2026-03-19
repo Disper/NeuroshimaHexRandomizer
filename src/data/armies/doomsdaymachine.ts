@@ -42,7 +42,7 @@ export const doomsdayMachine: Army = {
     { id: 'ddm-shooter-omega', name: 'Shooter Omega', category: 'soldier', count: 4, imageUrl: imgStrzelecomega },
     { id: 'ddm-doom-netter', name: 'Doom Netter', category: 'soldier', count: 2, imageUrl: imgSieciarzzaglady },
     { id: 'ddm-fire-position', name: 'Fire Position', category: 'soldier', count: 2, imageUrl: imgStanowiskoogniowe },
-    { id: 'ddm-trap', name: 'Trap', category: 'soldier', count: 1, imageUrl: imgPulapka },
+    { id: 'ddm-trap', name: 'Trap', category: 'module', count: 1, imageUrl: imgPulapka },
 
     // Modules
     { id: 'ddm-medic', name: 'Medic', category: 'module', count: 5, imageUrl: imgMedyk },
