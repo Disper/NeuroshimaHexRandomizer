@@ -26,7 +26,7 @@ export const sharrash: Army = {
   accentColor: '#dc2626',
   description:
     'A chaotic underground faction of mutants, rats, and beasts. Sharrash floods the board with cheap units and explosives — Mortars, Demolition Charges, and Plague tokens create havoc while Mutants and Rats swarm the enemy.',
-  hqAbility: 'All friendly adjacent units gain +1 melee attack strength.',
+  hqAbility: 'Underground Castling — once per turn, swap HQ with an adjacent Underground unit.',
   hqImageUrl: imgSztab,
   tiles: [
     // Instant tokens

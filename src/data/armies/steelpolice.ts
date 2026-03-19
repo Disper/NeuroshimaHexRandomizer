@@ -27,7 +27,7 @@ export const steelPolice: Army = {
   accentColor: '#3b82f6',
   description:
     'The brutal law enforcement arm of a crumbling empire. Heavily armed with riot control units, judges, and wardogs, Steel Police excels at aggressive close-quarters combat backed by a deep module bench.',
-  hqAbility: 'All friendly adjacent units gain +1 armour.',
+  hqAbility: 'May spend 1 durability to place Steel Net on any enemy unit (except HQ). Acts like Net. Returns when target is removed.',
   hqImageUrl: imgSztab,
   tiles: [
     // Instant tokens

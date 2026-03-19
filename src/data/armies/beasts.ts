@@ -25,7 +25,7 @@ export const beasts: Army = {
   accentColor: '#84cc16',
   description:
     'Feral mutants and monstrous creatures that roam the wasteland. Beasts overwhelm enemies with raw numbers and relentless aggression — fast, hard-hitting swarms backed by a surprisingly large Battle token pool.',
-  hqAbility: 'All friendly adjacent units gain +1 melee attack strength.',
+  hqAbility: 'Lair — at game start, place Cerberus adjacent to HQ. Beasts HQ has Initiative 1.',
   hqImageUrl: imgSztab,
   tiles: [
     // Instant tokens

@@ -24,7 +24,7 @@ export const vegas: Army = {
   accentColor: '#eab308',
   description:
     'A casino-run city-state where mercenaries and bodyguards enforce the house rules. Vegas excels at repositioning — Rotation, Castling, and Push tokens let it shuffle the board, while Agitators and Shooters apply pressure.',
-  hqAbility: 'All friendly adjacent units gain +1 to all attacks.',
+  hqAbility: 'Control Seizure — enemy units connected to HQ (in its direction) are taken over and count as yours.',
   hqImageUrl: imgSztab,
   tiles: [
     // Instant tokens

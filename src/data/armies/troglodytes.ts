@@ -27,7 +27,7 @@ export const troglodytes: Army = {
   accentColor: '#67e8f9',
   description:
     'Cave-dwelling mutants adapted to cold and darkness. Troglodytes field Bears, Archers, Ice Monkeys, and the unique Satiety system — Lungs, Claws, Eyes, Fangs, Muscles, and Heart tiles that grow stronger as the battle progresses.',
-  hqAbility: 'All friendly adjacent units gain +1 armour.',
+  hqAbility: 'Gourmand — adjacent units may place Greater Satiety when they Cannibalize.',
   hqImageUrl: imgSztab,
   tiles: [
     // Instant tokens

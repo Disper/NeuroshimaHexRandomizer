@@ -25,7 +25,7 @@ export const sandRunners: Army = {
   accentColor: '#d4a574',
   description:
     'A desert tribe surviving in the wasteland. Sand Runners rely on Sandstorm tokens for area control, Field Medics for healing, and a mix of veterans and specialists — Amok, Old Guard, and Pruners hold the line.',
-  hqAbility: 'All friendly adjacent units gain +1 armour.',
+  hqAbility: 'Two-sided HQ — one side eliminates a slower target before it attacks; the other has different abilities.',
   hqImageUrl: imgSztab,
   tiles: [
     // Instant tokens

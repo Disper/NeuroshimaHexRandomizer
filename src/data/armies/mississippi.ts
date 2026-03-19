@@ -26,7 +26,7 @@ export const mississippi: Army = {
   accentColor: '#14b8a6',
   description:
     'A toxic wasteland faction that thrives in polluted swamps and poisoned waters. Mississippi relies on stealth, poison, and area denial — Shadows, Poisoners, and Boilers control the board while Mutants and Guardians hold the line.',
-  hqAbility: 'All friendly adjacent units gain +1 armour.',
+  hqAbility: 'Once per turn, HQ may Push one adjacent enemy unit.',
   hqImageUrl: imgSztab,
   tiles: [
     // Instant tokens

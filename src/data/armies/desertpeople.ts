@@ -24,7 +24,7 @@ export const desertPeople: Army = {
   accentColor: '#e5c07b',
   description:
     'Tribal warriors of the wasteland who blend stealth, ranged combat, and shamanic support. Desert People field Coyotes, Archers, Young Warriors, and Shamans — a versatile mix of scouts and fighters backed by Mirage tokens.',
-  hqAbility: 'All friendly adjacent units gain +1 to ranged attack strength.',
+  hqAbility: 'Self-defense — in its Initiative, destroys one adjacent enemy unit. Does not affect enemy HQs.',
   hqImageUrl: imgSztab,
   tiles: [
     // Instant tokens

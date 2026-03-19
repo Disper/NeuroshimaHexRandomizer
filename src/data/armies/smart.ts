@@ -25,7 +25,7 @@ export const smart: Army = {
   accentColor: '#06b6d4',
   description:
     'An AI-controlled army of robots, cyborgs, and bio-droids. Smart combines heavy firepower — Gauss Cannons, Golems, Rippers — with Terror tokens and strong module support. Few instants, but devastating when they strike.',
-  hqAbility: 'All friendly adjacent units gain +1 armour.',
+  hqAbility: 'Adjacent units may perform an extra move and/or rotate, as if they had Mobility.',
   hqImageUrl: imgSztab,
   tiles: [
     // Instant tokens

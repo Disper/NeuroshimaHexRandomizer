@@ -28,7 +28,7 @@ export const merchantsGuild: Army = {
   accentColor: '#c2410c',
   description:
     'A wealthy trading faction that buys victory. Merchants Guild fields Paid Snipers, Black Market, Explosive Chris, and Kowalski — backed by Commanders, Chiefs, and the unique Gamble mechanic for high-risk, high-reward plays.',
-  hqAbility: 'All friendly adjacent units gain +1 to ranged attack strength.',
+  hqAbility: 'Capital — gain Gamble when HQ destroys units in Battle. Start with 2 Gamble.',
   hqImageUrl: imgSztab,
   tiles: [
     // Instant tokens

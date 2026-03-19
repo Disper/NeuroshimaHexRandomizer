@@ -25,7 +25,7 @@ export const pirates: Army = {
   accentColor: '#f59e0b',
   description:
     'Ruthless river raiders who control the waterways of the wasteland. Pirates are a nimble, aggressive army with strong ranged firepower and tricks that move both their own units and enemy pieces across the board.',
-  hqAbility: 'All friendly adjacent units gain +1 to ranged attack strength.',
+  hqAbility: 'Drift — HQ moves on Water Fields. Uses special water board setup.',
   hqImageUrl: imgSztab,
   tiles: [
     // Instant tokens

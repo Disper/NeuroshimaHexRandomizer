@@ -29,7 +29,7 @@ export const newYork: Army = {
   accentColor: '#6366f1',
   description:
     'A hardened urban militia defending the ruins of the Big Apple. New York fields a mix of cops, snipers, and street fighters — strong ranged firepower backed by versatile modules and Mine tokens for area control.',
-  hqAbility: 'All friendly adjacent units gain +1 to ranged attack strength.',
+  hqAbility: 'Adjacent friendly units gain +1 durability (one extra wound before death). Lost when unit leaves adjacency or HQ is netted.',
   hqImageUrl: imgSztab,
   tiles: [
     // Instant tokens
