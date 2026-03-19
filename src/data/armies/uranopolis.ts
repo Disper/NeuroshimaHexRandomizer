@@ -29,7 +29,7 @@ export const uranopolis: Army = {
   accentColor: '#a855f7',
   description:
     'A technologically advanced city-state whose citizens wield powerful generators and cutting-edge weaponry. Uranopolis units are fragile but pack devastating firepower, supported by a powerful array of modules.',
-  hqAbility: 'Net — all friendly adjacent units gain +1 to all attacks.',
+  hqAbility: 'Provides Power to each adjacent friendly unit.',
   hqImageUrl: imgSztab,
   tiles: [
     // Instant tokens

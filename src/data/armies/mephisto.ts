@@ -26,7 +26,7 @@ export const mephisto: Army = {
   accentColor: '#ef4444',
   description:
     'A colossal bio-mechanical demon assembled from interchangeable body parts. Mephisto\'s tiles are its own limbs and organs — each one a combat piece that snaps onto the growing creature on the board.',
-  hqAbility: 'All friendly adjacent units with a melee attack gain +1 to that attack.',
+  hqAbility: 'Once per turn, one Mephisto unit (including HQ) may rotate in any direction.',
   hqImageUrl: imgSztab,
   tiles: [
     // Instant tokens

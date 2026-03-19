@@ -24,7 +24,7 @@ export const outpost: Army = {
   accentColor: '#34d399',
   description:
     'A disciplined human military unit holding the line against all threats. Outpost has the most Move tokens in the game, letting it reposition constantly, and fields highly versatile Commandos that excel in any situation.',
-  hqAbility: 'All friendly adjacent units gain +1 to all attacks.',
+  hqAbility: 'Adjacent units may repeat their action in an Initiative segment 1 later. Units that acted in Initiative 0 cannot repeat.',
   hqImageUrl: imgSztab,
   tiles: [
     // Instant tokens
