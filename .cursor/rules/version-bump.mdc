@@ -1,0 +1,15 @@
+---
+description: Version bump when pushing changes
+alwaysApply: false
+globs: src/version.ts
+---
+
+# Version Bump on Push
+
+When the user asks to push changes:
+
+1. **Before committing**, update `src/version.ts`:
+   - Increment `APP_VERSION` by 0.0.1 (e.g. 1.0.0 → 1.0.1, 1.0.1 → 1.0.2)
+   - Set `APP_VERSION_DATE` to today's date in `YYYY-MM-DD` format
+2. Include the version file in the commit.
+3. Then run `git push`.

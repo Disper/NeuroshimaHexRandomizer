@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { armies } from './data/armies';
 import type { Army } from './data/types';
+import { APP_VERSION_FULL } from './version';
 import { ArmyView } from './components/ArmyView';
 import { CounterMode } from './components/CounterMode';
 import { DeckSetup } from './components/DeckSetup';
@@ -38,7 +39,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-stone-950">
+    <div className="min-h-screen bg-stone-950 flex flex-col">
       {/* Nav bar */}
       <header className="sticky top-0 z-20 border-b border-stone-800 bg-stone-950/90 backdrop-blur-sm">
         <div className="max-w-4xl mx-auto px-4 h-14 flex items-center justify-between">
@@ -129,6 +130,14 @@ export default function App() {
           <CounterMode army={selectedArmy} onBack={() => setScreen('home')} />
         )}
       </main>
+
+      <footer className="mt-auto border-t border-stone-800 py-4">
+        <div className="max-w-4xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2 text-sm text-stone-500">
+          <span>App made by Disper</span>
+          <span className="hidden sm:inline">·</span>
+          <span>v{APP_VERSION_FULL}</span>
+        </div>
+      </footer>
     </div>
   );
 }
