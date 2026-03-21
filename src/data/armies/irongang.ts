@@ -19,7 +19,8 @@ export const ironGang: Army = {
   accentColor: '#94a3b8',
   description:
     'A biker gang that rules the roads with brute force and mobility. Iron Gang fields Lumberjacks, Mountains, and Motorcyclists, backed by the unique Order token — the most versatile instant in the game, with nine copies.',
-  hqAbility: 'All friendly adjacent units gain +1 melee attack strength.',
+  hqAbility:
+    'Chain — the HQ has Chain: deal 1 wound to any enemy unit (including HQ) on a straight line between two Chain units.',
   hqImageUrl: imgSztab,
   tiles: [
     // Instant tokens
