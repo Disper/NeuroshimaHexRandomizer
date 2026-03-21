@@ -34,16 +34,16 @@ export const mephisto: Army = {
     { id: 'mephisto-battle', name: 'Battle', category: 'instant', count: 3, imageUrl: imgBitwa },
     { id: 'mephisto-move', name: 'Move', category: 'instant', count: 2, imageUrl: imgRuch },
 
-    // Soldiers (body parts / combat units)
-    { id: 'mephisto-incubator', name: 'Incubator', category: 'soldier', count: 3, imageUrl: imgInkubator },
-    { id: 'mephisto-transmitter', name: 'Transmitter', category: 'soldier', count: 1, imageUrl: imgTransmiter },
-    { id: 'mephisto-jaws', name: 'Jaws', category: 'soldier', count: 2, imageUrl: imgSzczeki },
-    { id: 'mephisto-tail', name: 'Tail', category: 'soldier', count: 2, imageUrl: imgOgon },
-    { id: 'mephisto-left-spike', name: 'Left Spike', category: 'soldier', count: 1, imageUrl: imgKoleclewy },
-    { id: 'mephisto-right-spike', name: 'Right Spike', category: 'soldier', count: 1, imageUrl: imgKolecprawy },
-    { id: 'mephisto-tentacles', name: 'Tentacles', category: 'soldier', count: 2, imageUrl: imgMacki },
-    { id: 'mephisto-appendages', name: 'Appendages', category: 'soldier', count: 2, imageUrl: imgOdnoza },
-    { id: 'mephisto-drill', name: 'Drill', category: 'soldier', count: 1, imageUrl: imgSwider },
+    // Implants (body parts / combat units)
+    { id: 'mephisto-incubator', name: 'Incubator', category: 'implant', count: 3, imageUrl: imgInkubator },
+    { id: 'mephisto-transmitter', name: 'Transmitter', category: 'implant', count: 1, imageUrl: imgTransmiter },
+    { id: 'mephisto-jaws', name: 'Jaws', category: 'implant', count: 2, imageUrl: imgSzczeki },
+    { id: 'mephisto-tail', name: 'Tail', category: 'implant', count: 2, imageUrl: imgOgon },
+    { id: 'mephisto-left-spike', name: 'Left Spike', category: 'implant', count: 1, imageUrl: imgKoleclewy },
+    { id: 'mephisto-right-spike', name: 'Right Spike', category: 'implant', count: 1, imageUrl: imgKolecprawy },
+    { id: 'mephisto-tentacles', name: 'Tentacles', category: 'implant', count: 2, imageUrl: imgMacki },
+    { id: 'mephisto-appendages', name: 'Appendages', category: 'implant', count: 2, imageUrl: imgOdnoza },
+    { id: 'mephisto-drill', name: 'Drill', category: 'implant', count: 1, imageUrl: imgSwider },
 
     // Modules
     { id: 'mephisto-amplifier', name: 'Amplifier', category: 'module', count: 2, imageUrl: imgWzmacniacz },

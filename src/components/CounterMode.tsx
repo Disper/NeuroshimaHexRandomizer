@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useMemo } from 'react';
 import type { Army, TileCategory } from '../data/types';
 import type { TileInstance } from '../utils/deck';
 import { buildDeck } from '../utils/deck';
@@ -8,20 +8,32 @@ const CATEGORY_ORDER: Record<TileCategory, number> = {
   hq: 0,
   instant: 1,
   soldier: 2,
-  module: 3,
+  implant: 3,
+  foundation: 4,
+  module: 5,
 };
 
-const DECK_CATEGORIES: Exclude<TileCategory, 'hq'>[] = ['instant', 'soldier', 'module'];
+const DECK_CATEGORIES: Exclude<TileCategory, 'hq'>[] = [
+  'instant',
+  'soldier',
+  'implant',
+  'foundation',
+  'module',
+];
 
 const CATEGORY_LABELS: Record<Exclude<TileCategory, 'hq'>, string> = {
   instant: 'Instant',
   soldier: 'Soldier',
+  implant: 'Implant',
+  foundation: 'Foundation',
   module: 'Module',
 };
 
 const CATEGORY_STYLES: Record<Exclude<TileCategory, 'hq'>, string> = {
   instant: 'bg-red-950/60 border-red-500/30 text-red-400',
   soldier: 'bg-blue-950/60 border-blue-500/30 text-blue-400',
+  implant: 'bg-violet-950/60 border-violet-500/30 text-violet-400',
+  foundation: 'bg-slate-950/60 border-slate-500/30 text-slate-400',
   module: 'bg-emerald-950/60 border-emerald-500/30 text-emerald-400',
 };
 
@@ -32,7 +44,7 @@ function sortByCategory(instances: TileInstance[]): TileInstance[] {
 }
 
 function countByCategory(instances: TileInstance[]): Record<Exclude<TileCategory, 'hq'>, number> {
-  const counts = { instant: 0, soldier: 0, module: 0 } as Record<
+  const counts = { instant: 0, soldier: 0, implant: 0, foundation: 0, module: 0 } as Record<
     Exclude<TileCategory, 'hq'>,
     number
   >;
@@ -40,6 +52,19 @@ function countByCategory(instances: TileInstance[]): Record<Exclude<TileCategory
     if (inst.tile.category !== 'hq') {
       counts[inst.tile.category]++;
     }
+  }
+  return counts;
+}
+
+/** Deck tile totals per category for this army (excludes HQ and excludeFromDeck). */
+function deckTotalsByCategory(army: Army): Record<Exclude<TileCategory, 'hq'>, number> {
+  const counts = { instant: 0, soldier: 0, implant: 0, foundation: 0, module: 0 } as Record<
+    Exclude<TileCategory, 'hq'>,
+    number
+  >;
+  for (const t of army.tiles) {
+    if (t.excludeFromDeck || t.category === 'hq') continue;
+    counts[t.category] += t.count;
   }
   return counts;
 }
@@ -71,6 +96,10 @@ export function CounterMode({ army, onBack }: CounterModeProps) {
   const totalTiles = remaining.length + drawn.length;
   const drawnCount = drawn.length;
   const remainingByCategory = countByCategory(remaining);
+  const summaryCategories = useMemo(() => {
+    const totals = deckTotalsByCategory(army);
+    return DECK_CATEGORIES.filter((cat) => totals[cat] > 0);
+  }, [army]);
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-8 space-y-6">
@@ -108,7 +137,7 @@ export function CounterMode({ army, onBack }: CounterModeProps) {
           Click a tile to move it between Remaining and Drawn.
         </p>
         <div className="flex flex-wrap gap-2 mt-4">
-          {DECK_CATEGORIES.map((cat) => (
+          {summaryCategories.map((cat) => (
             <span
               key={cat}
               className={`px-2.5 py-1 rounded border text-sm font-medium ${CATEGORY_STYLES[cat]}`}
@@ -144,7 +173,7 @@ export function CounterMode({ army, onBack }: CounterModeProps) {
         <h2 className="text-base font-semibold text-stone-400 mb-3">
           Remaining ({remaining.length})
         </h2>
-        {DECK_CATEGORIES.map((cat) => {
+        {summaryCategories.map((cat) => {
           const tiles = remaining.filter((i) => i.tile.category === cat);
           if (tiles.length === 0) return null;
           return (

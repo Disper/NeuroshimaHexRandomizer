@@ -1,4 +1,10 @@
-export type TileCategory = 'hq' | 'instant' | 'soldier' | 'module';
+export type TileCategory =
+  | 'hq'
+  | 'instant'
+  | 'soldier'
+  | 'implant'
+  | 'foundation'
+  | 'module';
 
 export interface TileDefinition {
   id: string;

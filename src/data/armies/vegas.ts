@@ -41,11 +41,13 @@ export const vegas: Army = {
     { id: 'vegas-guardian', name: 'Guardian', category: 'soldier', count: 2, imageUrl: imgStraznik },
     { id: 'vegas-shooter', name: 'Shooter', category: 'soldier', count: 2, imageUrl: imgStrzelec },
 
+    // Foundations
+    { id: 'vegas-mine', name: 'Mine', category: 'foundation', count: 2, imageUrl: imgMina },
+
     // Modules
     { id: 'vegas-agitator', name: 'Agitator', category: 'module', count: 3, imageUrl: imgAgitator },
     { id: 'vegas-saboteur', name: 'Saboteur', category: 'module', count: 1, imageUrl: imgDywersant },
     { id: 'vegas-medic', name: 'Medic', category: 'module', count: 1, imageUrl: imgMedyk },
     { id: 'vegas-scout', name: 'Scout', category: 'module', count: 2, imageUrl: imgZwiadowca },
-    { id: 'vegas-mine', name: 'Mine', category: 'module', count: 2, imageUrl: imgMina },
   ],
 };

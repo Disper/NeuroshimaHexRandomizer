@@ -36,10 +36,12 @@ export const merchantsGuild: Army = {
     { id: 'mg-black-market', name: 'Black Market', category: 'instant', count: 1, imageUrl: imgCzarnyRynek },
     { id: 'mg-move', name: 'Move', category: 'instant', count: 5, imageUrl: imgRuch },
     { id: 'mg-battle', name: 'Battle', category: 'instant', count: 2, imageUrl: imgBitwa },
-    { id: 'mg-strategist', name: 'Strategist', category: 'soldier', count: 1, imageUrl: imgStrateg },
+
+    // Implants
+    { id: 'mg-strategist', name: 'Strategist', category: 'implant', count: 1, imageUrl: imgStrateg },
+    { id: 'mg-briber', name: 'Briber', category: 'implant', count: 1, imageUrl: imgLapowkarz },
 
     // Soldiers
-    { id: 'mg-briber', name: 'Briber', category: 'soldier', count: 1, imageUrl: imgLapowkarz },
     { id: 'mg-explosive-chris', name: 'Explosive Chris', category: 'soldier', count: 3, imageUrl: imgWybuchowyChris },
     { id: 'mg-kowalski', name: 'Kowalski', category: 'soldier', count: 2, imageUrl: imgKowalski },
     { id: 'mg-black-box', name: 'Black Box', category: 'soldier', count: 2, imageUrl: imgCzarnaSkrzynka },

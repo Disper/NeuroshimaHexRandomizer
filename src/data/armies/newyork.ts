@@ -51,11 +51,13 @@ export const newYork: Army = {
     { id: 'ny-spy-cleaner', name: 'Spy Cleaner', category: 'soldier', count: 1, imageUrl: imgSzpiegczysciciel },
     { id: 'ny-netter', name: 'Netter', category: 'soldier', count: 1, imageUrl: imgSieciarz },
 
+    // Foundations
+    { id: 'ny-mine', name: 'Mine', category: 'foundation', count: 2, imageUrl: imgMina },
+
     // Modules
     { id: 'ny-sergeant', name: 'Sergeant', category: 'module', count: 1, imageUrl: imgSierzant },
     { id: 'ny-officer-1', name: 'Officer I', category: 'module', count: 2, imageUrl: imgOficer1 },
     { id: 'ny-officer-2', name: 'Officer II', category: 'module', count: 2, imageUrl: imgOficer2 },
     { id: 'ny-scout', name: 'Scout', category: 'module', count: 2, imageUrl: imgZwiadowca },
-    { id: 'ny-mine', name: 'Mine', category: 'module', count: 2, imageUrl: imgMina },
   ],
 };

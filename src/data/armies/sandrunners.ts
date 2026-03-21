@@ -48,6 +48,8 @@ export const sandRunners: Army = {
     { id: 'sr-chief', name: 'Chief', category: 'module', count: 2, imageUrl: imgWodz },
     { id: 'sr-officer-2', name: 'Officer II', category: 'module', count: 1, imageUrl: imgOficer2 },
     { id: 'sr-caravan', name: 'Caravan', category: 'module', count: 2, imageUrl: imgKarawana },
-    { id: 'sr-quicksand', name: 'Quicksand', category: 'module', count: 2, imageUrl: imgRuchomepiaski },
+
+    // Foundations
+    { id: 'sr-quicksand', name: 'Quicksand', category: 'foundation', count: 2, imageUrl: imgRuchomepiaski },
   ],
 };

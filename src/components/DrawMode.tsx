@@ -5,7 +5,9 @@ const CATEGORY_ORDER: Record<TileCategory, number> = {
   hq: 0,
   instant: 1,
   soldier: 2,
-  module: 3,
+  implant: 3,
+  foundation: 4,
+  module: 5,
 };
 import type { TileInstance } from '../utils/deck';
 import { buildDeck } from '../utils/deck';

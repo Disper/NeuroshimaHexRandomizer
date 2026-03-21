@@ -10,6 +10,8 @@ const sections: { category: TileCategory; label: string }[] = [
   { category: 'hq', label: 'Headquarters' },
   { category: 'instant', label: 'Instant Tokens' },
   { category: 'soldier', label: 'Soldiers' },
+  { category: 'implant', label: 'Implants' },
+  { category: 'foundation', label: 'Foundations' },
   { category: 'module', label: 'Modules' },
 ];
 

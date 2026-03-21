@@ -35,6 +35,18 @@ const categoryConfig: Record<
     badge: 'bg-blue-500 text-blue-950',
     fallbackBg: 'bg-blue-950/50',
   },
+  implant: {
+    label: 'Implant',
+    border: 'border-violet-500/40',
+    badge: 'bg-violet-500 text-violet-950',
+    fallbackBg: 'bg-violet-950/50',
+  },
+  foundation: {
+    label: 'Foundation',
+    border: 'border-slate-500/40',
+    badge: 'bg-slate-500 text-slate-950',
+    fallbackBg: 'bg-slate-950/50',
+  },
   module: {
     label: 'Module',
     border: 'border-emerald-500/40',
@@ -47,6 +59,8 @@ const categoryIcon: Record<TileCategory, string> = {
   hq: '🏛',
   instant: '⚡',
   soldier: '⚔',
+  implant: '🧬',
+  foundation: '🧱',
   module: '⚙',
 };
 

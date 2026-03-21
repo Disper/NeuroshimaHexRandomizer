@@ -45,11 +45,13 @@ export const neojungle: Army = {
     { id: 'nj-tangle', name: 'Tangle', category: 'soldier', count: 2, imageUrl: imgKlebowisko },
     { id: 'nj-vine', name: 'Vine', category: 'module', count: 1, imageUrl: imgPnacza },
 
+    // Foundations
+    { id: 'nj-root', name: 'Root', category: 'foundation', count: 2, imageUrl: imgKorzen },
+
     // Modules
     { id: 'nj-medic', name: 'Medic', category: 'module', count: 3, imageUrl: imgMedyk },
     { id: 'nj-symbiont-alpha', name: 'Symbiont Alpha', category: 'module', count: 1, imageUrl: imgSymbiontalfa },
     { id: 'nj-symbiont-beta', name: 'Symbiont Beta', category: 'module', count: 1, imageUrl: imgSymbiontbeta },
     { id: 'nj-symbiont-gamma', name: 'Symbiont Gamma', category: 'module', count: 2, imageUrl: imgSymbiontgamma },
-    { id: 'nj-root', name: 'Root', category: 'module', count: 2, imageUrl: imgKorzen },
   ],
 };

@@ -45,11 +45,13 @@ export const mississippi: Army = {
     { id: 'ms-netter', name: 'Netter', category: 'soldier', count: 1, imageUrl: imgSieciarz },
     { id: 'ms-paralysis', name: 'Paralysis', category: 'module', count: 2, imageUrl: imgParaliz },
 
+    // Foundations
+    { id: 'ms-toxic-bomb', name: 'Toxic Trap', category: 'foundation', count: 1, imageUrl: imgToksycznabomba },
+
     // Modules
     { id: 'ms-medic', name: 'Medic', category: 'module', count: 2, imageUrl: imgMedyk },
     { id: 'ms-mutation', name: 'Mutation', category: 'module', count: 2, imageUrl: imgMutacja },
     { id: 'ms-zone', name: 'Zone', category: 'module', count: 1, imageUrl: imgStrefa },
     { id: 'ms-boiler', name: 'Boiler', category: 'module', count: 3, imageUrl: imgBojler },
-    { id: 'ms-toxic-bomb', name: 'Toxic Bomb', category: 'module', count: 1, imageUrl: imgToksycznabomba },
   ],
 };

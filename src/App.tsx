@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { armies } from './data/armies';
-import type { Army } from './data/types';
+import type { Army, TileCategory } from './data/types';
 import { APP_VERSION_FULL } from './version';
 import { ArmyView } from './components/ArmyView';
 import { CounterMode } from './components/CounterMode';
@@ -218,7 +218,42 @@ function HomeScreen({
   );
 }
 
+function deckTileCount(army: Army, category: TileCategory): number {
+  return army.tiles
+    .filter((t) => t.category === category && !t.excludeFromDeck)
+    .reduce((s, t) => s + t.count, 0);
+}
+
 function ArmyCard({ army, onClick }: { army: Army; onClick: () => void }) {
+  const categoryBadges = [
+    {
+      category: 'instant' as const,
+      label: 'instant',
+      className: 'px-2 py-0.5 rounded bg-red-950/60 border border-red-500/30 text-red-400',
+    },
+    {
+      category: 'soldier' as const,
+      label: 'soldiers',
+      className: 'px-2 py-0.5 rounded bg-blue-950/60 border border-blue-500/30 text-blue-400',
+    },
+    {
+      category: 'implant' as const,
+      label: 'implants',
+      className: 'px-2 py-0.5 rounded bg-violet-950/60 border border-violet-500/30 text-violet-400',
+    },
+    {
+      category: 'foundation' as const,
+      label: 'foundations',
+      className: 'px-2 py-0.5 rounded bg-slate-950/60 border border-slate-500/30 text-slate-400',
+    },
+    {
+      category: 'module' as const,
+      label: 'modules',
+      className: 'px-2 py-0.5 rounded bg-emerald-950/60 border border-emerald-500/30 text-emerald-400',
+    },
+  ]
+    .map((row) => ({ ...row, count: deckTileCount(army, row.category) }))
+    .filter((row) => row.count > 0);
 
   return (
     <button
@@ -249,26 +284,15 @@ function ArmyCard({ army, onClick }: { army: Army; onClick: () => void }) {
           )}
         </div>
 
-        <div className="mt-4 flex items-center gap-2 text-xs text-stone-500">
-          <span className="px-2 py-0.5 rounded bg-red-950/60 border border-red-500/30 text-red-400">
-            {army.tiles
-              .filter((t) => t.category === 'instant' && !t.excludeFromDeck)
-              .reduce((s, t) => s + t.count, 0)}{' '}
-            instant
-          </span>
-          <span className="px-2 py-0.5 rounded bg-blue-950/60 border border-blue-500/30 text-blue-400">
-            {army.tiles
-              .filter((t) => t.category === 'soldier' && !t.excludeFromDeck)
-              .reduce((s, t) => s + t.count, 0)}{' '}
-            soldiers
-          </span>
-          <span className="px-2 py-0.5 rounded bg-emerald-950/60 border border-emerald-500/30 text-emerald-400">
-            {army.tiles
-              .filter((t) => t.category === 'module' && !t.excludeFromDeck)
-              .reduce((s, t) => s + t.count, 0)}{' '}
-            modules
-          </span>
-        </div>
+        {categoryBadges.length > 0 && (
+          <div className="mt-4 flex flex-wrap items-center gap-2 text-xs text-stone-500">
+            {categoryBadges.map(({ category, label, className, count }) => (
+              <span key={category} className={className}>
+                {count} {label}
+              </span>
+            ))}
+          </div>
+        )}
       </div>
     </button>
   );
