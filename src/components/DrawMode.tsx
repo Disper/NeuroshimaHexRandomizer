@@ -122,12 +122,12 @@ export function DrawMode({ army, deckCode, onBack, onBackToSetup }: DrawModeProp
         </div>
       )}
 
-      {/* Merchants Guild — random respawn tiles */}
+      {/* Merchants Guild — random Reconnaissance tiles */}
       {army.id === MERCHANTS_GUILD_ARMY_ID && (
         <div className="rounded-2xl border border-stone-600 bg-stone-900/80 px-4 py-3 text-sm text-stone-400">
           <span className="font-semibold text-stone-300">Merchants Guild (random mode):</span>{' '}
-          <strong className="text-stone-200">Respawn 1</strong> and{' '}
-          <strong className="text-stone-200">Respawn 2</strong> are not in the deck at start. Each is
+          <strong className="text-stone-200">Reconnaissance 1</strong> and{' '}
+          <strong className="text-stone-200">Reconnaissance 2</strong> are not in the deck at start. Each is
           shuffled into the remaining deck after the{' '}
           <strong className="text-stone-200">first</strong> and{' '}
           <strong className="text-stone-200">second</strong> Squad Leader is drawn (same order for

@@ -13,12 +13,12 @@ const SALT_RESPAWN_2 = 0x52e572;
 function respawnTileDef(n: 1 | 2): TileDefinition {
   return {
     id: n === 1 ? 'mg-respawn-1' : 'mg-respawn-2',
-    name: n === 1 ? 'Respawn 1' : 'Respawn 2',
+    name: n === 1 ? 'Reconnaissance 1' : 'Reconnaissance 2',
     category: 'instant',
     count: 1,
     description: 'Random mode only — shuffled into the deck after a Squad Leader is drawn.',
     imageUrl: imgSquadLeader,
-    imageOverlayLabel: n === 1 ? 'R1' : 'R2',
+    imageOverlayLabel: n === 1 ? 'RC1' : 'RC2',
   };
 }
 
