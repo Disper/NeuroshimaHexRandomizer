@@ -30,24 +30,24 @@ export const doomsdayMachine: Army = {
   tiles: [
     // Instant tokens
     { id: 'ddm-battle', name: 'Battle', category: 'instant', count: 4, imageUrl: imgBitwa },
-    { id: 'ddm-push', name: 'Push', category: 'instant', count: 1, imageUrl: imgOdepchniecie },
+    { id: 'ddm-push', name: 'Push Back', category: 'instant', count: 1, imageUrl: imgOdepchniecie },
     { id: 'ddm-small-bomb', name: 'Small Bomb', category: 'instant', count: 1, imageUrl: imgMalabomba },
 
     // Soldiers
-    { id: 'ddm-shooter-alpha', name: 'Shooter Alpha', category: 'soldier', count: 2, imageUrl: imgStrzelecalfa },
+    { id: 'ddm-shooter-alpha', name: 'Alpha Shooter', category: 'soldier', count: 2, imageUrl: imgStrzelecalfa },
     { id: 'ddm-gauss-cannon', name: 'Gauss Cannon', category: 'soldier', count: 2, imageUrl: imgDzialkogaussa },
-    { id: 'ddm-shooter-gamma', name: 'Shooter Gamma', category: 'soldier', count: 1, imageUrl: imgStrzelecgamma },
-    { id: 'ddm-disintegrator', name: 'Disintegrator', category: 'soldier', count: 2, imageUrl: imgRoztrajacz },
-    { id: 'ddm-shooter-delta', name: 'Shooter Delta', category: 'soldier', count: 1, imageUrl: imgStrzelecdelta },
-    { id: 'ddm-shooter-omega', name: 'Shooter Omega', category: 'soldier', count: 4, imageUrl: imgStrzelecomega },
-    { id: 'ddm-doom-netter', name: 'Doom Netter', category: 'soldier', count: 2, imageUrl: imgSieciarzzaglady },
-    { id: 'ddm-fire-position', name: 'Fire Position', category: 'soldier', count: 2, imageUrl: imgStanowiskoogniowe },
+    { id: 'ddm-shooter-gamma', name: 'Gamma Shooter', category: 'soldier', count: 1, imageUrl: imgStrzelecgamma },
+    { id: 'ddm-disintegrator', name: 'Tripler', category: 'soldier', count: 2, imageUrl: imgRoztrajacz },
+    { id: 'ddm-shooter-delta', name: 'Delta Shooter', category: 'soldier', count: 1, imageUrl: imgStrzelecdelta },
+    { id: 'ddm-shooter-omega', name: 'Omega Shooter', category: 'soldier', count: 4, imageUrl: imgStrzelecomega },
+    { id: 'ddm-doom-netter', name: 'Doom Net Fighter', category: 'soldier', count: 2, imageUrl: imgSieciarzzaglady },
+    { id: 'ddm-fire-position', name: 'Fireblast', category: 'soldier', count: 2, imageUrl: imgStanowiskoogniowe },
     { id: 'ddm-trap', name: 'Trap', category: 'module', count: 1, imageUrl: imgPulapka },
 
     // Modules
     { id: 'ddm-medic', name: 'Medic', category: 'module', count: 5, imageUrl: imgMedyk },
     { id: 'ddm-officer', name: 'Officer', category: 'module', count: 2, imageUrl: imgOficer },
     { id: 'ddm-scout', name: 'Scout', category: 'module', count: 2, imageUrl: imgZwiadowca },
-    { id: 'ddm-main-processor', name: 'Main Combat Processor', category: 'module', count: 2, imageUrl: imgGlownyprocesorbojowy },
+    { id: 'ddm-main-processor', name: 'Main War Processor', category: 'module', count: 2, imageUrl: imgGlownyprocesorbojowy },
   ],
 };

@@ -29,6 +29,11 @@ export interface Army {
   description: string;
   hqAbility: string;
   hqImageUrl?: string;
+  /**
+   * When true, Headquarters shows only `tiles` with category `hq` (three Dancer Objects, etc.),
+   * not the synthetic single-HQ card.
+   */
+  multiHeadquarters?: boolean;
   tiles: TileDefinition[];
 }
 

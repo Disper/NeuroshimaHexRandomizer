@@ -31,11 +31,11 @@ export const borgo: Army = {
     { id: 'borgo-grenade', name: 'Grenade', category: 'instant', count: 1, imageUrl: imgGranat },
 
     // Soldiers
-    { id: 'borgo-mutek', name: 'Mutek', category: 'soldier', count: 6, imageUrl: imgMutek },
-    { id: 'borgo-knifer', name: 'Knifer', category: 'soldier', count: 4, imageUrl: imgNozownik },
-    { id: 'borgo-netter', name: 'Netter', category: 'soldier', count: 2, imageUrl: imgSieciarz },
+    { id: 'borgo-mutek', name: 'Mutant', category: 'soldier', count: 6, imageUrl: imgMutek },
+    { id: 'borgo-knifer', name: 'Claws', category: 'soldier', count: 4, imageUrl: imgNozownik },
+    { id: 'borgo-netter', name: 'Net Fighter', category: 'soldier', count: 2, imageUrl: imgSieciarz },
     { id: 'borgo-super-mutant', name: 'Super-mutant', category: 'soldier', count: 1, imageUrl: imgSupermutant },
-    { id: 'borgo-strongman', name: 'Strongman', category: 'soldier', count: 2, imageUrl: imgSilacz },
+    { id: 'borgo-strongman', name: 'Brawler', category: 'soldier', count: 2, imageUrl: imgSilacz },
     { id: 'borgo-assassin', name: 'Assassin', category: 'soldier', count: 2, imageUrl: imgZabojca },
 
     // Modules

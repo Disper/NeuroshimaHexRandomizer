@@ -27,7 +27,7 @@ export const merchantsGuild: Army = {
   color: '#1a1408',
   accentColor: '#c2410c',
   description:
-    'A wealthy trading faction that buys victory. Merchants Guild fields Paid Snipers, Black Market, Explosive Chris, and Kowalski — backed by Commanders, Chiefs, and the unique Gamble mechanic for high-risk, high-reward plays.',
+    'A wealthy trading faction that buys victory. Merchants Guild fields Paid Snipers, Black Market, Bomber Chris, and Welders — backed by Commanders, Bosses, and the unique Gamble mechanic for high-risk, high-reward plays.',
   hqAbility: 'Capital — gain Gamble when HQ destroys units in Battle. Start with 2 Gamble.',
   hqImageUrl: imgSztab,
   tiles: [
@@ -42,20 +42,20 @@ export const merchantsGuild: Army = {
     { id: 'mg-briber', name: 'Briber', category: 'implant', count: 1, imageUrl: imgLapowkarz },
 
     // Soldiers
-    { id: 'mg-explosive-chris', name: 'Explosive Chris', category: 'soldier', count: 3, imageUrl: imgWybuchowyChris },
-    { id: 'mg-kowalski', name: 'Kowalski', category: 'soldier', count: 2, imageUrl: imgKowalski },
+    { id: 'mg-explosive-chris', name: 'Bomber Chris', category: 'soldier', count: 3, imageUrl: imgWybuchowyChris },
+    { id: 'mg-kowalski', name: 'Welder', category: 'soldier', count: 2, imageUrl: imgKowalski },
     { id: 'mg-black-box', name: 'Black Box', category: 'soldier', count: 2, imageUrl: imgCzarnaSkrzynka },
-    { id: 'mg-risk-taker', name: 'Risk Taker', category: 'soldier', count: 1, imageUrl: imgRyzykant },
-    { id: 'mg-squad-leader', name: 'Squad Leader', category: 'soldier', count: 2, imageUrl: imgLiderZwiadu },
+    { id: 'mg-risk-taker', name: 'Daredevil', category: 'soldier', count: 1, imageUrl: imgRyzykant },
+    { id: 'mg-squad-leader', name: 'Scout Leader', category: 'soldier', count: 2, imageUrl: imgLiderZwiadu },
     { id: 'mg-hacker', name: 'Hacker', category: 'soldier', count: 1, imageUrl: imgHakerka },
     { id: 'mg-tank', name: 'Tank', category: 'soldier', count: 1, imageUrl: imgCzolg },
-    { id: 'mg-road-pirate', name: 'Road Pirate', category: 'soldier', count: 2, imageUrl: imgPiratDrogowy },
-    { id: 'mg-head-hunter', name: 'Head Hunter', category: 'soldier', count: 1, imageUrl: imgLowczyniGlow },
-    { id: 'mg-turret', name: 'Turret', category: 'soldier', count: 1, imageUrl: imgWiezyczkaZFotokomorka },
+    { id: 'mg-road-pirate', name: 'Highway Cruiser', category: 'soldier', count: 2, imageUrl: imgPiratDrogowy },
+    { id: 'mg-head-hunter', name: 'Debt Hunter', category: 'soldier', count: 1, imageUrl: imgLowczyniGlow },
+    { id: 'mg-turret', name: 'Automatic Turret', category: 'soldier', count: 1, imageUrl: imgWiezyczkaZFotokomorka },
 
     // Modules
     { id: 'mg-scout', name: 'Scout', category: 'module', count: 1, imageUrl: imgZwiadowca },
     { id: 'mg-commander', name: 'Commander', category: 'module', count: 2, imageUrl: imgKomander },
-    { id: 'mg-chief', name: 'Chief', category: 'module', count: 4, imageUrl: imgNaczelnik },
+    { id: 'mg-chief', name: 'Boss', category: 'module', count: 4, imageUrl: imgNaczelnik },
   ],
 };

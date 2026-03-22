@@ -37,17 +37,17 @@ export const partisans: Army = {
     // Soldiers
     { id: 'part-bunker-manager', name: 'Bunker Manager', category: 'module', count: 1, imageUrl: imgZarzadcaBunkra },
     { id: 'part-sleeper-agent', name: 'Sleeper Agent', category: 'soldier', count: 2, imageUrl: imgUspionyAgent },
-    { id: 'part-doctor-assistant', name: 'Doctor Assistant', category: 'soldier', count: 2, imageUrl: imgAsystentkaDoktora },
-    { id: 'part-guard-drone', name: 'Guard Drone', category: 'soldier', count: 1, imageUrl: imgDronStraznik },
+    { id: 'part-doctor-assistant', name: 'Assistant Doctor', category: 'soldier', count: 2, imageUrl: imgAsystentkaDoktora },
+    { id: 'part-guard-drone', name: 'Defense Drone', category: 'soldier', count: 1, imageUrl: imgDronStraznik },
     { id: 'part-cyborg-charlie', name: 'Cyborg Charlie', category: 'soldier', count: 4, imageUrl: imgCyborgCharlie },
     { id: 'part-provocateur', name: 'Provocateur', category: 'soldier', count: 3, imageUrl: imgProwokatorka },
     { id: 'part-gustav', name: 'Gustav 2.0', category: 'soldier', count: 2, imageUrl: imgGustav2 },
-    { id: 'part-crazy-sid', name: 'Crazy Sid', category: 'soldier', count: 1, imageUrl: imgSzalonySid },
+    { id: 'part-crazy-sid', name: 'Mad Sid', category: 'soldier', count: 1, imageUrl: imgSzalonySid },
 
     // Modules
-    { id: 'part-veteran-scout', name: 'Veteran Scout', category: 'module', count: 1, imageUrl: imgZwiadowcaWeteran },
+    { id: 'part-veteran-scout', name: 'Scout Veteran', category: 'module', count: 1, imageUrl: imgZwiadowcaWeteran },
     { id: 'part-scout', name: 'Scout', category: 'module', count: 2, imageUrl: imgZwiadowca },
     { id: 'part-medic', name: 'Medic', category: 'module', count: 1, imageUrl: imgMedyk },
-    { id: 'part-driver', name: 'Driver', category: 'module', count: 1, imageUrl: imgSzofer },
+    { id: 'part-driver', name: 'Chauffeur', category: 'module', count: 1, imageUrl: imgSzofer },
   ],
 };

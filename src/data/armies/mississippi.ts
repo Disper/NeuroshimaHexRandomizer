@@ -32,21 +32,21 @@ export const mississippi: Army = {
     // Instant tokens
     { id: 'ms-battle', name: 'Battle', category: 'instant', count: 4, imageUrl: imgBitwa },
     { id: 'ms-smoke-screen', name: 'Smoke Screen', category: 'instant', count: 1, imageUrl: imgZaslonadymna },
-    { id: 'ms-swap', name: 'Swap', category: 'instant', count: 1, imageUrl: imgPodmiana },
-    { id: 'ms-push', name: 'Push', category: 'instant', count: 1, imageUrl: imgOdepchniecie },
+    { id: 'ms-swap', name: 'Transposition', category: 'instant', count: 1, imageUrl: imgPodmiana },
+    { id: 'ms-push', name: 'Push Back', category: 'instant', count: 1, imageUrl: imgOdepchniecie },
     { id: 'ms-move', name: 'Move', category: 'instant', count: 3, imageUrl: imgRuch },
 
     // Soldiers
     { id: 'ms-shadow', name: 'Shadow', category: 'soldier', count: 2, imageUrl: imgCien },
     { id: 'ms-mutant', name: 'Mutant', category: 'soldier', count: 3, imageUrl: imgMutant },
     { id: 'ms-poisoner', name: 'Poisoner', category: 'soldier', count: 2, imageUrl: imgTruciciel },
-    { id: 'ms-guardian', name: 'Guardian', category: 'soldier', count: 4, imageUrl: imgStraznik },
-    { id: 'ms-assassin', name: 'Assassin', category: 'soldier', count: 1, imageUrl: imgSkrytobojca },
-    { id: 'ms-netter', name: 'Netter', category: 'soldier', count: 1, imageUrl: imgSieciarz },
+    { id: 'ms-guardian', name: 'Guard', category: 'soldier', count: 4, imageUrl: imgStraznik },
+    { id: 'ms-assassin', name: 'Hitman', category: 'soldier', count: 1, imageUrl: imgSkrytobojca },
+    { id: 'ms-netter', name: 'Net Fighter', category: 'soldier', count: 1, imageUrl: imgSieciarz },
     { id: 'ms-paralysis', name: 'Paralysis', category: 'module', count: 2, imageUrl: imgParaliz },
 
     // Foundations
-    { id: 'ms-toxic-bomb', name: 'Toxic Trap', category: 'foundation', count: 1, imageUrl: imgToksycznabomba },
+    { id: 'ms-toxic-bomb', name: 'Toxic Bomb', category: 'foundation', count: 1, imageUrl: imgToksycznabomba },
 
     // Modules
     { id: 'ms-medic', name: 'Medic', category: 'module', count: 2, imageUrl: imgMedyk },

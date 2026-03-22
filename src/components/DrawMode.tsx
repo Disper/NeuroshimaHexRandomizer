@@ -144,9 +144,9 @@ export function DrawMode({ army, deckCode, onBack, onBackToSetup }: DrawModeProp
           <span className="font-semibold text-stone-300">Merchants Guild (random mode):</span>{' '}
           <strong className="text-stone-200">Reconnaissance 1</strong> and{' '}
           <strong className="text-stone-200">Reconnaissance 2</strong> are not in the deck at start. After
-          the <strong className="text-stone-200">first</strong> Squad Leader is drawn, use{' '}
+          the <strong className="text-stone-200">first</strong> Scout Leader is drawn, use{' '}
           <strong className="text-stone-200">Shuffle Reconnaissance 1</strong>; after the{' '}
-          <strong className="text-stone-200">second</strong> Squad Leader, use{' '}
+          <strong className="text-stone-200">second</strong> Scout Leader, use{' '}
           <strong className="text-stone-200">Shuffle Reconnaissance 2</strong>. Each inserts that tile at a
           random position in the remaining deck (position is deterministic from the deck code).
         </div>

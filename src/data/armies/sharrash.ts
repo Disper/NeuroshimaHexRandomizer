@@ -40,9 +40,9 @@ export const sharrash: Army = {
     { id: 'sharrash-mutant', name: 'Mutant', category: 'soldier', count: 3, imageUrl: imgMutant },
     { id: 'sharrash-rats', name: 'Rats', category: 'soldier', count: 3, imageUrl: imgSzczury },
     { id: 'sharrash-mortar', name: 'Mortar', category: 'soldier', count: 3, imageUrl: imgMozdzierz },
-    { id: 'sharrash-demolition-charge', name: 'Demolition Charge', category: 'soldier', count: 4, imageUrl: imgLadunekwybuchowy },
-    { id: 'sharrash-underground', name: 'Underground', category: 'module', count: 1, imageUrl: imgPodziemia },
-    { id: 'sharrash-dump', name: 'Dump', category: 'module', count: 1, imageUrl: imgSmietnisko },
+    { id: 'sharrash-demolition-charge', name: 'Explosive', category: 'soldier', count: 4, imageUrl: imgLadunekwybuchowy },
+    { id: 'sharrash-underground', name: 'Underworlds', category: 'module', count: 1, imageUrl: imgPodziemia },
+    { id: 'sharrash-dump', name: 'Landfill', category: 'module', count: 1, imageUrl: imgSmietnisko },
 
     // Foundations
     { id: 'sharrash-hole', name: 'Hole', category: 'foundation', count: 1, imageUrl: imgDziura },

@@ -37,16 +37,16 @@ export const neojungle: Army = {
 
     // Soldiers
     { id: 'nj-monster', name: 'Monster', category: 'soldier', count: 1, imageUrl: imgMonstrum },
-    { id: 'nj-ripper', name: 'Ripper', category: 'soldier', count: 4, imageUrl: imgRozkrajacz },
-    { id: 'nj-poisoner', name: 'Poisoner', category: 'soldier', count: 2, imageUrl: imgTruciciel },
+    { id: 'nj-ripper', name: 'Slicer', category: 'soldier', count: 4, imageUrl: imgRozkrajacz },
+    { id: 'nj-poisoner', name: 'Nightshade', category: 'soldier', count: 2, imageUrl: imgTruciciel },
     { id: 'nj-crusher', name: 'Crusher', category: 'soldier', count: 3, imageUrl: imgMiazdzyciel },
-    { id: 'nj-tree-wall', name: 'Tree Wall', category: 'soldier', count: 1, imageUrl: imgScianadrzew },
-    { id: 'nj-netter', name: 'Netter', category: 'soldier', count: 3, imageUrl: imgSieciarz },
-    { id: 'nj-tangle', name: 'Tangle', category: 'soldier', count: 2, imageUrl: imgKlebowisko },
-    { id: 'nj-vine', name: 'Vine', category: 'module', count: 1, imageUrl: imgPnacza },
+    { id: 'nj-tree-wall', name: 'Wall of Trees', category: 'soldier', count: 1, imageUrl: imgScianadrzew },
+    { id: 'nj-netter', name: 'Net Fighter', category: 'soldier', count: 3, imageUrl: imgSieciarz },
+    { id: 'nj-tangle', name: 'Swarm', category: 'soldier', count: 2, imageUrl: imgKlebowisko },
+    { id: 'nj-vine', name: 'Vines', category: 'module', count: 1, imageUrl: imgPnacza },
 
     // Foundations
-    { id: 'nj-root', name: 'Root', category: 'foundation', count: 2, imageUrl: imgKorzen },
+    { id: 'nj-root', name: 'Roots', category: 'foundation', count: 2, imageUrl: imgKorzen },
 
     // Modules
     { id: 'nj-medic', name: 'Medic', category: 'module', count: 3, imageUrl: imgMedyk },

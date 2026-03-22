@@ -47,7 +47,7 @@ export const steelPolice: Army = {
     },
     {
       id: 'sp-push',
-      name: 'Push',
+      name: 'Push Back',
       category: 'instant',
       count: 1,
       imageUrl: imgOdepchniecie,
@@ -63,7 +63,7 @@ export const steelPolice: Army = {
     // Soldiers
     {
       id: 'sp-executor',
-      name: 'Executor',
+      name: 'Executioner',
       category: 'soldier',
       count: 1,
       imageUrl: imgEgzekutor,
@@ -84,14 +84,14 @@ export const steelPolice: Army = {
     },
     {
       id: 'sp-brytan',
-      name: 'Brytan',
+      name: 'Bandog',
       category: 'soldier',
       count: 1,
       imageUrl: imgBrytan,
     },
     {
       id: 'sp-functionary',
-      name: 'Functionary',
+      name: 'Riot Policeman',
       category: 'soldier',
       count: 2,
       imageUrl: imgFunkcjonariusz,
@@ -112,7 +112,7 @@ export const steelPolice: Army = {
     },
     {
       id: 'sp-steel-net-launcher',
-      name: 'Steel Net Launcher',
+      name: 'Net of Steel Launcher',
       category: 'module',
       count: 1,
       imageUrl: imgWyrzutniastalowejsieci,
@@ -156,7 +156,7 @@ export const steelPolice: Army = {
     },
     {
       id: 'sp-sterydomat',
-      name: 'Sterydomat',
+      name: 'Steroid Dispenser',
       category: 'module',
       count: 1,
       imageUrl: imgSterydomat,

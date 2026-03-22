@@ -17,7 +17,7 @@ function respawnTileDef(n: 1 | 2): TileDefinition {
     category: 'instant',
     count: 1,
     description:
-      'Random mode only — tap Shuffle Reconnaissance after the required Squad Leader(s) are drawn.',
+      'Random mode only — tap Shuffle Reconnaissance after the required Scout Leader(s) are drawn.',
     imageUrl: imgSquadLeader,
     imageOverlayLabel: n === 1 ? 'RC1' : 'RC2',
   };
@@ -56,7 +56,7 @@ export function insertIntoRemainingDeck(
 
 /**
  * Insert Reconnaissance 1 or 2 into the remaining deck at a random position (seeded from deck code).
- * Used when the player taps "Shuffle Reconnaissance" after the corresponding Squad Leader(s) have been drawn.
+ * Used when the player taps "Shuffle Reconnaissance" after the corresponding Scout Leader(s) have been drawn.
  */
 export function insertMerchantsGuildReconnaissance(
   deck: TileInstance[],

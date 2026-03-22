@@ -35,12 +35,12 @@ export const newYork: Army = {
     // Instant tokens
     { id: 'ny-battle', name: 'Battle', category: 'instant', count: 5, imageUrl: imgBitwa },
     { id: 'ny-move', name: 'Move', category: 'instant', count: 2, imageUrl: imgRuch },
-    { id: 'ny-push', name: 'Push', category: 'instant', count: 1, imageUrl: imgOdepchniecie },
+    { id: 'ny-push', name: 'Push Back', category: 'instant', count: 1, imageUrl: imgOdepchniecie },
     { id: 'ny-sniper', name: 'Sniper', category: 'instant', count: 1, imageUrl: imgSnajper },
 
     // Soldiers
     { id: 'ny-shooter', name: 'Shooter', category: 'soldier', count: 1, imageUrl: imgStrzelec },
-    { id: 'ny-marksman', name: 'Marksman', category: 'soldier', count: 2, imageUrl: imgStrzelecwyborowy },
+    { id: 'ny-marksman', name: 'Sharpshooter', category: 'soldier', count: 2, imageUrl: imgStrzelecwyborowy },
     { id: 'ny-shotgun', name: 'Shotgun', category: 'soldier', count: 1, imageUrl: imgShotgun },
     { id: 'ny-spy-shooter', name: 'Spy Shooter', category: 'soldier', count: 2, imageUrl: imgSzpiegstrzelec },
     { id: 'ny-rocket-launcher', name: 'Rocket Launcher', category: 'soldier', count: 1, imageUrl: imgWyrzutniarakiet },
@@ -49,7 +49,7 @@ export const newYork: Army = {
     { id: 'ny-hammer', name: 'Hammer', category: 'soldier', count: 2, imageUrl: imgMlot },
     { id: 'ny-pusher', name: 'Pusher', category: 'soldier', count: 1, imageUrl: imgOdpychacz },
     { id: 'ny-spy-cleaner', name: 'Spy Cleaner', category: 'soldier', count: 1, imageUrl: imgSzpiegczysciciel },
-    { id: 'ny-netter', name: 'Netter', category: 'soldier', count: 1, imageUrl: imgSieciarz },
+    { id: 'ny-netter', name: 'Net Fighter', category: 'soldier', count: 1, imageUrl: imgSieciarz },
 
     // Foundations
     { id: 'ny-mine', name: 'Mine', category: 'foundation', count: 2, imageUrl: imgMina },

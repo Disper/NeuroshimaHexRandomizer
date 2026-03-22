@@ -30,7 +30,7 @@ export const vegas: Army = {
     // Instant tokens
     { id: 'vegas-battle', name: 'Battle', category: 'instant', count: 5, imageUrl: imgBitwa },
     { id: 'vegas-rotation', name: 'Rotation', category: 'instant', count: 3, imageUrl: imgObrot },
-    { id: 'vegas-push', name: 'Push', category: 'instant', count: 3, imageUrl: imgOdepchniecie },
+    { id: 'vegas-push', name: 'Push Back', category: 'instant', count: 3, imageUrl: imgOdepchniecie },
     { id: 'vegas-castling', name: 'Castling', category: 'instant', count: 2, imageUrl: imgRoszada },
     { id: 'vegas-move', name: 'Move', category: 'instant', count: 3, imageUrl: imgRuch },
     { id: 'vegas-sniper', name: 'Sniper', category: 'instant', count: 1, imageUrl: imgSnajper },

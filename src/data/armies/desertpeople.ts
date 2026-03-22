@@ -35,15 +35,15 @@ export const desertPeople: Army = {
     // Soldiers
     { id: 'dp-scalpel', name: 'Scalpel', category: 'soldier', count: 1, imageUrl: imgSkalpel },
     { id: 'dp-coyote', name: 'Coyote', category: 'soldier', count: 2, imageUrl: imgKojot },
-    { id: 'dp-archer', name: 'Archer', category: 'soldier', count: 2, imageUrl: imgLucznik },
-    { id: 'dp-young-warriors', name: 'Young Warriors', category: 'soldier', count: 2, imageUrl: imgMlodziWojownicy },
-    { id: 'dp-tracker', name: 'Tracker', category: 'soldier', count: 2, imageUrl: imgTropiciel },
+    { id: 'dp-archer', name: 'Dust Arrow', category: 'soldier', count: 2, imageUrl: imgLucznik },
+    { id: 'dp-young-warriors', name: 'Younglings', category: 'soldier', count: 2, imageUrl: imgMlodziWojownicy },
+    { id: 'dp-tracker', name: 'Nomad', category: 'soldier', count: 2, imageUrl: imgTropiciel },
     { id: 'dp-rattlesnake', name: 'Rattlesnake', category: 'soldier', count: 1, imageUrl: imgGrzechotnik },
-    { id: 'dp-worm-clan-warrior', name: 'Worm Clan Warrior', category: 'soldier', count: 3, imageUrl: imgWojownikKlanuCzerwia },
+    { id: 'dp-worm-clan-warrior', name: 'Maggot Clan Warrior', category: 'soldier', count: 3, imageUrl: imgWojownikKlanuCzerwia },
     { id: 'dp-shaman', name: 'Shaman', category: 'soldier', count: 3, imageUrl: imgSzamanka },
 
     // Modules
-    { id: 'dp-spearman', name: 'Spearman', category: 'module', count: 2, imageUrl: imgGrotnik },
+    { id: 'dp-spearman', name: 'Fletcher', category: 'module', count: 2, imageUrl: imgGrotnik },
     { id: 'dp-hideout', name: 'Hideout', category: 'module', count: 1, imageUrl: imgKryjowka },
     { id: 'dp-officer', name: 'Officer', category: 'module', count: 2, imageUrl: imgOficer },
     { id: 'dp-scout', name: 'Scout', category: 'module', count: 2, imageUrl: imgZwiadowca },

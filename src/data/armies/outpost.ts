@@ -30,15 +30,15 @@ export const outpost: Army = {
     // Instant tokens
     { id: 'outpost-battle', name: 'Battle', category: 'instant', count: 6, imageUrl: imgBitwa },
     { id: 'outpost-move', name: 'Move', category: 'instant', count: 7, imageUrl: imgRuch },
+    { id: 'outpost-sniper', name: 'Sniper', category: 'instant', count: 1, imageUrl: imgSnajper },
 
     // Soldiers
-    { id: 'outpost-sniper', name: 'Sniper', category: 'soldier', count: 1, imageUrl: imgSnajper },
     { id: 'outpost-runner', name: 'Runner', category: 'soldier', count: 2, imageUrl: imgBiegacz },
     { id: 'outpost-hmg', name: 'HMG', category: 'soldier', count: 1, imageUrl: imgCkm },
     { id: 'outpost-commando', name: 'Commando', category: 'soldier', count: 5, imageUrl: imgKomandos },
-    { id: 'outpost-liquidator', name: 'Liquidator', category: 'soldier', count: 2, imageUrl: imgLikwidator },
-    { id: 'outpost-powered-armour', name: 'Powered Armour', category: 'soldier', count: 1, imageUrl: imgPancerzwspomagany },
-    { id: 'outpost-strongman', name: 'Strongman', category: 'soldier', count: 1, imageUrl: imgSilacz },
+    { id: 'outpost-liquidator', name: 'Annihilator', category: 'soldier', count: 2, imageUrl: imgLikwidator },
+    { id: 'outpost-powered-armour', name: 'Mobile Armor', category: 'soldier', count: 1, imageUrl: imgPancerzwspomagany },
+    { id: 'outpost-strongman', name: 'Brawler', category: 'soldier', count: 1, imageUrl: imgSilacz },
 
     // Modules
     { id: 'outpost-recon-centre', name: 'Recon Centre', category: 'module', count: 1, imageUrl: imgCentrumrozpoznania },

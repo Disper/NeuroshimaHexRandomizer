@@ -75,6 +75,54 @@ export function ArmyView({ army, onStartDraw }: ArmyViewProps) {
       {/* Tile sections */}
       {sections.map(({ category, label }) => {
         if (category === 'hq') {
+          if (army.multiHeadquarters) {
+            const hqTiles = army.tiles.filter((t) => t.category === 'hq');
+            const sectionTotal = hqTiles.reduce((sum, t) => sum + t.count, 0);
+            return (
+              <section key={category}>
+                <div className="flex items-baseline justify-between mb-3">
+                  <h2 className="text-lg font-semibold text-stone-200">{label}</h2>
+                  <span className="text-sm text-stone-500">
+                    {sectionTotal} tile{sectionTotal !== 1 ? 's' : ''}
+                  </span>
+                </div>
+                {/* Single merged card: all Object HQs (e.g. Dancer) */}
+                <div className="rounded-xl border border-amber-500/50 bg-stone-900 text-left overflow-hidden flex flex-col max-w-2xl">
+                  <div className="flex flex-wrap sm:flex-nowrap gap-1 sm:gap-2 p-2 sm:p-3">
+                    {hqTiles.map((tile) => (
+                      <div
+                        key={tile.id}
+                        className="flex flex-1 basis-0 min-w-0 flex-col items-center rounded-lg bg-stone-950/50 p-1.5"
+                      >
+                        {tile.imageUrl ? (
+                          <img
+                            src={tile.imageUrl}
+                            alt={tile.name}
+                            loading="lazy"
+                            className="w-full h-24 sm:h-28 object-contain"
+                          />
+                        ) : (
+                          <div className="w-full h-24 sm:h-28 flex items-center justify-center text-3xl">
+                            🏛
+                          </div>
+                        )}
+                        <span className="mt-1 text-xs sm:text-sm font-semibold text-stone-100 text-center leading-tight px-0.5">
+                          {tile.name}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="px-2 py-1.5 flex items-center justify-between gap-2 border-t border-stone-700/60 bg-stone-950/60">
+                    <span className="font-semibold text-stone-100 text-sm">Headquarters (Objects)</span>
+                    <span className="shrink-0 rounded-full font-bold text-xs px-1.5 py-0.5 bg-amber-500 text-amber-950">
+                      HQ
+                    </span>
+                  </div>
+                </div>
+              </section>
+            );
+          }
+
           const sectionTotal =
             1 + tilesWithHq.reduce((sum, t) => sum + t.count, 0);
           return (
