@@ -1,5 +1,5 @@
 import { useState, useCallback, useMemo } from 'react';
-import type { Army, TileCategory } from '../data/types';
+import type { Army, TileCategory, TileDefinition } from '../data/types';
 import type { TileInstance } from '../utils/deck';
 import { buildDeck } from '../utils/deck';
 import { TileCard } from './TileCard';
@@ -43,6 +43,38 @@ function sortByCategory(instances: TileInstance[]): TileInstance[] {
   );
 }
 
+/** Group instances by tile id; order of groups follows first occurrence in `instances`. */
+function groupInstancesByTileId(instances: TileInstance[]): {
+  tile: TileDefinition;
+  instances: TileInstance[];
+}[] {
+  const byId = new Map<string, TileInstance[]>();
+  const order: string[] = [];
+  for (const inst of instances) {
+    const id = inst.tile.id;
+    if (!byId.has(id)) {
+      byId.set(id, []);
+      order.push(id);
+    }
+    byId.get(id)!.push(inst);
+  }
+  return order.map((id) => ({
+    tile: byId.get(id)![0].tile,
+    instances: byId.get(id)!,
+  }));
+}
+
+function sortGroupsByCategory(
+  groups: { tile: TileDefinition; instances: TileInstance[] }[]
+): { tile: TileDefinition; instances: TileInstance[] }[] {
+  return [...groups].sort((a, b) => {
+    const oa = CATEGORY_ORDER[a.tile.category];
+    const ob = CATEGORY_ORDER[b.tile.category];
+    if (oa !== ob) return oa - ob;
+    return a.tile.name.localeCompare(b.tile.name) || a.tile.id.localeCompare(b.tile.id);
+  });
+}
+
 function countByCategory(instances: TileInstance[]): Record<Exclude<TileCategory, 'hq'>, number> {
   const counts = { instant: 0, soldier: 0, implant: 0, foundation: 0, module: 0 } as Record<
     Exclude<TileCategory, 'hq'>,
@@ -77,6 +109,7 @@ interface CounterModeProps {
 export function CounterMode({ army, onBack }: CounterModeProps) {
   const [remaining, setRemaining] = useState<TileInstance[]>(() => buildDeck(army));
   const [drawn, setDrawn] = useState<TileInstance[]>([]);
+  const [stackIdentical, setStackIdentical] = useState(false);
 
   const handleRemainingClick = useCallback((instance: TileInstance) => {
     setRemaining((prev) => prev.filter((i) => i.instanceId !== instance.instanceId));
@@ -136,6 +169,15 @@ export function CounterMode({ army, onBack }: CounterModeProps) {
         <p className="text-stone-500 text-sm mt-2">
           Click a tile to move it between Remaining and Drawn.
         </p>
+        <label className="mt-4 flex items-center gap-2.5 cursor-pointer select-none text-sm text-stone-300 hover:text-stone-100">
+          <input
+            type="checkbox"
+            className="rounded border-stone-600 bg-stone-800 text-amber-600 focus:ring-amber-500/40 focus:ring-offset-0"
+            checked={stackIdentical}
+            onChange={(e) => setStackIdentical(e.target.checked)}
+          />
+          <span>Stack identical tiles</span>
+        </label>
         <div className="flex flex-wrap gap-2 mt-4">
           {summaryCategories.map((cat) => (
             <span
@@ -155,13 +197,20 @@ export function CounterMode({ army, onBack }: CounterModeProps) {
             Drawn ({drawn.length})
           </h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
-            {sortByCategory(drawn).map((instance) => (
+            {(stackIdentical
+              ? sortGroupsByCategory(groupInstancesByTileId(drawn))
+              : sortByCategory(drawn).map((instance) => ({
+                  tile: instance.tile,
+                  instances: [instance],
+                }))
+            ).map(({ tile, instances }) => (
               <TileCard
-                key={instance.instanceId}
-                tile={instance.tile}
-                count={1}
+                key={instances.map((i) => i.instanceId).join('|')}
+                tile={tile}
+                count={instances.length}
+                countInParentheses={stackIdentical && instances.length > 1}
                 small
-                onClick={() => handleDrawnClick(instance)}
+                onClick={() => handleDrawnClick(instances[0])}
               />
             ))}
           </div>
@@ -184,13 +233,20 @@ export function CounterMode({ army, onBack }: CounterModeProps) {
                 {CATEGORY_LABELS[cat]} — {tiles.length} remaining
               </h3>
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mt-2">
-                {tiles.map((instance) => (
+                {(stackIdentical
+                  ? sortGroupsByCategory(groupInstancesByTileId(tiles))
+                  : tiles.map((instance) => ({
+                      tile: instance.tile,
+                      instances: [instance],
+                    }))
+                ).map(({ tile, instances }) => (
                   <TileCard
-                    key={instance.instanceId}
-                    tile={instance.tile}
-                    count={1}
+                    key={instances.map((i) => i.instanceId).join('|')}
+                    tile={tile}
+                    count={instances.length}
+                    countInParentheses={stackIdentical && instances.length > 1}
                     small
-                    onClick={() => handleRemainingClick(instance)}
+                    onClick={() => handleRemainingClick(instances[0])}
                   />
                 ))}
               </div>

@@ -5,6 +5,8 @@ interface TileCardProps {
   tile: TileDefinition;
   /** Override displayed count (e.g. always show 1 for drawn instances) */
   count?: number;
+  /** When true with count above 1, show "Name (count)" in the label instead of name + ×count badge */
+  countInParentheses?: boolean;
   dimmed?: boolean;
   /** Compact mode for grids of many tiles */
   small?: boolean;
@@ -64,7 +66,15 @@ const categoryIcon: Record<TileCategory, string> = {
   module: '⚙',
 };
 
-export function TileCard({ tile, count, dimmed, small, spotlight, onClick }: TileCardProps) {
+export function TileCard({
+  tile,
+  count,
+  countInParentheses,
+  dimmed,
+  small,
+  spotlight,
+  onClick,
+}: TileCardProps) {
   const cfg = categoryConfig[tile.category];
   const displayCount = count ?? tile.count;
   const [imgError, setImgError] = useState(false);
@@ -163,10 +173,17 @@ export function TileCard({ tile, count, dimmed, small, spotlight, onClick }: Til
             'font-semibold text-stone-100 leading-tight truncate',
             small ? 'text-xs' : 'text-sm',
           ].join(' ')}
+          title={
+            countInParentheses && displayCount > 1
+              ? `${tile.name} (${displayCount})`
+              : tile.name
+          }
         >
-          {tile.name}
+          {countInParentheses && displayCount > 1
+            ? `${tile.name} (${displayCount})`
+            : tile.name}
         </span>
-        {displayCount > 1 && (
+        {!countInParentheses && displayCount > 1 && (
           <span
             className={[
               'shrink-0 rounded-full font-bold leading-none',
