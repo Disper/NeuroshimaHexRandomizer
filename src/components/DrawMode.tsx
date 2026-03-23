@@ -159,7 +159,7 @@ export function DrawMode({ army, deckCode, onBack, onBackToSetup }: DrawModeProp
           {getIronGangHookBanner(ironGangHookMode)}{' '}
           <span className="text-stone-500">
             (7th character of the code encodes Hook: 2 = no Hook, 3 = Officer, 4 = Order, 5 =
-            Motorcyclist.)
+            Biker.)
           </span>
         </div>
       )}

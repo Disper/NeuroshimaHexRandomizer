@@ -98,7 +98,7 @@ export function DeckSetup({ army, onStart, onBack }: DeckSetupProps) {
               sets Hook mode (<span className="text-stone-300">2</span> = no Hook,{' '}
               <span className="text-stone-300">3</span> = Officer,{' '}
               <span className="text-stone-300">4</span> = Order,{' '}
-              <span className="text-stone-300">5</span> = Motorcyclist). Share the full code so
+              <span className="text-stone-300">5</span> = Biker). Share the full code so
               everyone uses the same deck.
             </>
           ) : (

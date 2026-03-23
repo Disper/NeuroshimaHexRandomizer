@@ -24,32 +24,32 @@ export const sandRunners: Army = {
   color: '#1a140a',
   accentColor: '#d4a574',
   description:
-    'A desert tribe surviving in the wasteland. Sand Runners rely on Sandstorm tokens for area control, Field Medics for healing, and a mix of veterans and specialists — Amok, Old Guard, and Pruners hold the line.',
+    'A desert tribe surviving in the wasteland. Sand Runners rely on Sandstorm tokens for area control, Field Medics for healing, and a mix of veterans and specialists — Optymist, Vulture, and Secateur hold the line.',
   hqAbility: 'Two-sided HQ — one side eliminates a slower target before it attacks; the other has different abilities.',
   hqImageUrl: imgSztab,
   tiles: [
     // Instant tokens
     { id: 'sr-move', name: 'Move', category: 'instant', count: 3, imageUrl: imgRuch },
     { id: 'sr-sandstorm', name: 'Sandstorm', category: 'instant', count: 5, imageUrl: imgBurzapiaskowa },
-    { id: 'sr-push', name: 'Push', category: 'instant', count: 2, imageUrl: imgOdepchniecie },
+    { id: 'sr-push', name: 'Push Back', category: 'instant', count: 2, imageUrl: imgOdepchniecie },
     { id: 'sr-trigger', name: 'Trigger', category: 'soldier', count: 1, imageUrl: imgCyngiel },
 
     // Soldiers
-    { id: 'sr-amok', name: 'Amok', category: 'soldier', count: 3, imageUrl: imgAmok },
-    { id: 'sr-old-guard', name: 'Old Guard', category: 'soldier', count: 2, imageUrl: imgStaragwardia },
-    { id: 'sr-pile-driver', name: 'Pile Driver', category: 'soldier', count: 3, imageUrl: imgKafar },
-    { id: 'sr-pruner', name: 'Pruner', category: 'soldier', count: 2, imageUrl: imgSekator },
+    { id: 'sr-amok', name: 'Optymist', category: 'soldier', count: 3, imageUrl: imgAmok },
+    { id: 'sr-old-guard', name: 'Vulture', category: 'soldier', count: 2, imageUrl: imgStaragwardia },
+    { id: 'sr-pile-driver', name: 'Hammer', category: 'soldier', count: 3, imageUrl: imgKafar },
+    { id: 'sr-pruner', name: 'Secateur', category: 'soldier', count: 2, imageUrl: imgSekator },
     { id: 'sr-mirage', name: 'Mirage', category: 'module', count: 2, imageUrl: imgFatamorgana },
 
     // Modules
     { id: 'sr-field-medic-santa', name: 'Field Medic Santa', category: 'soldier', count: 1, imageUrl: imgMedykpolowysanta },
     { id: 'sr-field-medic-lu', name: 'Field Medic Lu', category: 'soldier', count: 1, imageUrl: imgMedykpolowylu },
     { id: 'sr-officer-1', name: 'Officer I', category: 'module', count: 2, imageUrl: imgOficer1 },
-    { id: 'sr-chief', name: 'Chief', category: 'module', count: 2, imageUrl: imgWodz },
+    { id: 'sr-chief', name: 'Chieftain', category: 'module', count: 2, imageUrl: imgWodz },
     { id: 'sr-officer-2', name: 'Officer II', category: 'module', count: 1, imageUrl: imgOficer2 },
     { id: 'sr-caravan', name: 'Caravan', category: 'module', count: 2, imageUrl: imgKarawana },
 
     // Foundations
-    { id: 'sr-quicksand', name: 'Quicksand', category: 'foundation', count: 2, imageUrl: imgRuchomepiaski },
+    { id: 'sr-quicksand', name: 'Quicksands', category: 'foundation', count: 2, imageUrl: imgRuchomepiaski },
   ],
 };

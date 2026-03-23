@@ -24,7 +24,7 @@ export const beasts: Army = {
   color: '#14200f',
   accentColor: '#84cc16',
   description:
-    'Feral mutants and monstrous creatures that roam the wasteland. Beasts overwhelm enemies with raw numbers and relentless aggression — fast, hard-hitting swarms backed by a surprisingly large Battle token pool.',
+    'Feral mutants and monstrous creatures that roam the wasteland. Beasts overwhelm enemies with raw numbers and relentless aggression — fast, hard-hitting Hive units backed by a surprisingly large Battle token pool.',
   hqAbility: 'Lair — at game start, place Cerberus adjacent to HQ. Beasts HQ has Initiative 1.',
   hqImageUrl: imgSztab,
   tiles: [
@@ -32,7 +32,7 @@ export const beasts: Army = {
     { id: 'beasts-move', name: 'Move', category: 'instant', count: 2, imageUrl: imgRuch },
     { id: 'beasts-battle', name: 'Battle', category: 'instant', count: 6, imageUrl: imgBitwa },
     { id: 'beasts-hunt', name: 'Hunt', category: 'instant', count: 1, imageUrl: imgPolowanie },
-    { id: 'beasts-pull', name: 'Pull', category: 'instant', count: 3, imageUrl: imgPrzyciagniecie },
+    { id: 'beasts-pull', name: 'Grab', category: 'instant', count: 3, imageUrl: imgPrzyciagniecie },
 
     // Soldiers
     {
@@ -45,17 +45,17 @@ export const beasts: Army = {
       displayWithHq: true,
     },
     { id: 'beasts-alpha', name: 'Alpha', category: 'soldier', count: 1, imageUrl: imgAlfa },
-    { id: 'beasts-swarm', name: 'Swarm', category: 'soldier', count: 2, imageUrl: imgRoj },
-    { id: 'beasts-ram', name: 'Ram', category: 'soldier', count: 4, imageUrl: imgTaran },
-    { id: 'beasts-acid-spitter', name: 'Acid Spitter', category: 'soldier', count: 2, imageUrl: imgKwasopluj },
+    { id: 'beasts-swarm', name: 'Hive', category: 'soldier', count: 2, imageUrl: imgRoj },
+    { id: 'beasts-ram', name: 'The Ram', category: 'soldier', count: 4, imageUrl: imgTaran },
+    { id: 'beasts-acid-spitter', name: 'Acid-Spitt', category: 'soldier', count: 2, imageUrl: imgKwasopluj },
     { id: 'beasts-bug', name: 'Bug', category: 'soldier', count: 2, imageUrl: imgRobal },
     { id: 'beasts-urchin', name: 'Urchin', category: 'soldier', count: 2, imageUrl: imgJezowiec },
     { id: 'beasts-vulture', name: 'Vulture', category: 'soldier', count: 2, imageUrl: imgSep },
-    { id: 'beasts-arachnoid', name: 'Arachnoid', category: 'soldier', count: 1, imageUrl: imgArachnoid },
+    { id: 'beasts-arachnoid', name: 'Arachnid', category: 'soldier', count: 1, imageUrl: imgArachnoid },
 
     // Modules
-    { id: 'beasts-scout', name: 'Scout', category: 'module', count: 3, imageUrl: imgZwiadowca },
+    { id: 'beasts-scout', name: 'Ranger', category: 'module', count: 3, imageUrl: imgZwiadowca },
     { id: 'beasts-officer', name: 'Officer I', category: 'module', count: 2, imageUrl: imgOficer1 },
-    { id: 'beasts-ripper', name: 'Ripper', category: 'module', count: 1, imageUrl: imgSzarpak },
+    { id: 'beasts-ripper', name: 'Scrabbler', category: 'module', count: 1, imageUrl: imgSzarpak },
   ],
 };

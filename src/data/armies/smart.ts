@@ -24,13 +24,13 @@ export const smart: Army = {
   color: '#0a0f14',
   accentColor: '#06b6d4',
   description:
-    'An AI-controlled army of robots, cyborgs, and bio-droids. Smart combines heavy firepower — Gauss Cannons, Golems, Rippers — with Terror tokens and strong module support. Few instants, but devastating when they strike.',
+    'An AI-controlled army of robots, cyborgs, and bio-droids. Smart combines heavy firepower — Gauss Cannons, MK3 Golems, Rippers — with Terror tokens and strong module support. Few instants, but devastating when they strike.',
   hqAbility: 'Adjacent units may perform an extra move and/or rotate, as if they had Mobility.',
   hqImageUrl: imgSztab,
   tiles: [
     // Instant tokens
     { id: 'smart-battle', name: 'Battle', category: 'instant', count: 4, imageUrl: imgBitwa },
-    { id: 'smart-push', name: 'Push', category: 'instant', count: 3, imageUrl: imgOdepchniecie },
+    { id: 'smart-push', name: 'Push Back', category: 'instant', count: 3, imageUrl: imgOdepchniecie },
     { id: 'smart-move', name: 'Move', category: 'instant', count: 1, imageUrl: imgRuch },
     { id: 'smart-sniper', name: 'Sniper', category: 'instant', count: 1, imageUrl: imgSnajper },
     { id: 'smart-terror', name: 'Terror', category: 'instant', count: 2, imageUrl: imgTerror },
@@ -38,16 +38,16 @@ export const smart: Army = {
     // Soldiers
     { id: 'smart-ripper', name: 'Ripper', category: 'soldier', count: 1, imageUrl: imgRozpruwacz },
     { id: 'smart-twister', name: 'Twister', category: 'soldier', count: 1, imageUrl: imgTwister },
-    { id: 'smart-netter', name: 'Netter', category: 'soldier', count: 2, imageUrl: imgSieciarz },
+    { id: 'smart-netter', name: 'Net Fighter', category: 'soldier', count: 2, imageUrl: imgSieciarz },
     { id: 'smart-gauss-cannon', name: 'Gauss Cannon', category: 'soldier', count: 3, imageUrl: imgDzialkogaussa },
-    { id: 'smart-golem-mk3', name: 'Golem MK3', category: 'soldier', count: 2, imageUrl: imgGolemmk3 },
+    { id: 'smart-golem-mk3', name: 'MK3 Golem', category: 'soldier', count: 2, imageUrl: imgGolemmk3 },
     { id: 'smart-cyborg', name: 'Cyborg', category: 'soldier', count: 2, imageUrl: imgCyborg },
     { id: 'smart-bio-droid', name: 'Bio-droid', category: 'soldier', count: 1, imageUrl: imgBiodroid },
 
     // Modules
     { id: 'smart-transporter', name: 'Transporter', category: 'soldier', count: 3, imageUrl: imgTransporter },
     { id: 'smart-officer', name: 'Officer', category: 'module', count: 4, imageUrl: imgOficer },
-    { id: 'smart-mother', name: 'Mother', category: 'module', count: 2, imageUrl: imgMatka },
+    { id: 'smart-mother', name: 'Mother Module', category: 'module', count: 2, imageUrl: imgMatka },
     { id: 'smart-scout', name: 'Scout', category: 'module', count: 2, imageUrl: imgZwiadowca },
   ],
 };

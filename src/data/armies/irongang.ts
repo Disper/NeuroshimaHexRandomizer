@@ -18,21 +18,21 @@ export const ironGang: Army = {
   color: '#141414',
   accentColor: '#94a3b8',
   description:
-    'A biker gang that rules the roads with brute force and mobility. Iron Gang fields Lumberjacks, Mountains, and Motorcyclists, backed by the unique Order token — the most versatile instant in the game, with nine copies.',
+    'A biker gang that rules the roads with brute force and mobility. Iron Gang fields Lumberjacks, Mountains, and Bikers, backed by the unique Order token — the most versatile instant in the game, with nine copies.',
   hqAbility:
     'Chain — the HQ has Chain: deal 1 wound to any enemy unit (including HQ) on a straight line between two Chain units.',
   hqImageUrl: imgSztab,
   tiles: [
     // Instant tokens
-    { id: 'ig-double-move', name: 'Double Move', category: 'instant', count: 2, imageUrl: imgPodwojnyruch },
+    { id: 'ig-double-move', name: 'Doubled Move', category: 'instant', count: 2, imageUrl: imgPodwojnyruch },
     { id: 'ig-order', name: 'Order', category: 'instant', count: 9, imageUrl: imgRozkaz },
 
     // Soldiers
     { id: 'ig-fanatic', name: 'Fanatic', category: 'soldier', count: 3, imageUrl: imgFanatyk },
-    { id: 'ig-ranged-netter', name: 'Ranged Netter', category: 'soldier', count: 3, imageUrl: imgSieciarzdystansowy },
+    { id: 'ig-ranged-netter', name: 'Ranged Net Fighter', category: 'soldier', count: 3, imageUrl: imgSieciarzdystansowy },
     { id: 'ig-lumberjack', name: 'Lumberjack', category: 'soldier', count: 5, imageUrl: imgDrwal },
     { id: 'ig-mountain', name: 'Mountain', category: 'soldier', count: 3, imageUrl: imgGora },
-    { id: 'ig-motorcyclist', name: 'Motorcyclist', category: 'soldier', count: 4, imageUrl: imgMotocyklista },
+    { id: 'ig-motorcyclist', name: 'Biker', category: 'soldier', count: 4, imageUrl: imgMotocyklista },
     { id: 'ig-hook', name: 'Hook', category: 'soldier', count: 1, imageUrl: imgHak },
 
     // Modules

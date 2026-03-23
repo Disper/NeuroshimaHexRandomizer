@@ -49,7 +49,7 @@ export const uranopolis: Army = {
     },
     {
       id: 'uranopolis-push',
-      name: 'Push',
+      name: 'Push Back',
       category: 'instant',
       count: 3,
       imageUrl: imgOdepchniecie,
@@ -65,7 +65,7 @@ export const uranopolis: Army = {
     // Soldiers
     {
       id: 'uranopolis-electrowireman',
-      name: 'Electrowireman',
+      name: 'Electro Net Fighter',
       category: 'soldier',
       count: 2,
       imageUrl: imgElektrosieciarz,
@@ -93,7 +93,7 @@ export const uranopolis: Army = {
     },
     {
       id: 'uranopolis-guardian',
-      name: 'Guardian',
+      name: 'Guard',
       category: 'soldier',
       count: 2,
       imageUrl: imgStraznik,
@@ -114,7 +114,7 @@ export const uranopolis: Army = {
     },
     {
       id: 'uranopolis-demolisher',
-      name: 'Demolisher',
+      name: 'Ravager',
       category: 'soldier',
       count: 1,
       imageUrl: imgWyburzacz,
@@ -130,7 +130,7 @@ export const uranopolis: Army = {
     // Modules
     {
       id: 'uranopolis-speed-generator',
-      name: 'Speed Generator',
+      name: 'Acceleration Generator',
       category: 'module',
       count: 1,
       imageUrl: imgGeneratorprzyspieszajacy,
@@ -172,7 +172,7 @@ export const uranopolis: Army = {
     },
     {
       id: 'uranopolis-waste',
-      name: 'Waste',
+      name: 'Wastes',
       category: 'module',
       count: 1,
       imageUrl: imgOdpady,

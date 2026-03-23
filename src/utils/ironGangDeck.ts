@@ -61,7 +61,7 @@ export function parseIronGangDeckCode(code: string): {
     return {
       mode: null,
       error:
-        'Invalid 7th character (Hook mode). Use 2 = no Hook, 3 = Officer, 4 = Order, 5 = Motorcyclist.',
+        'Invalid 7th character (Hook mode). Use 2 = no Hook, 3 = Officer, 4 = Order, 5 = Biker.',
     };
   }
   return { mode, error: null };
@@ -113,7 +113,7 @@ export function getIronGangHookBanner(mode: IronGangHookMode): string {
     case 'replace-order':
       return 'This deck contains Hook. One Order was removed so Hook can be shuffled instead.';
     case 'replace-motorcyclist':
-      return 'This deck contains Hook. One Motorcyclist was removed so Hook can be shuffled instead.';
+      return 'This deck contains Hook. One Biker was removed so Hook can be shuffled instead.';
     default:
       return '';
   }
@@ -141,7 +141,7 @@ export const IRON_GANG_HOOK_OPTIONS: {
   },
   {
     mode: 'replace-motorcyclist',
-    label: 'Hook instead of a Motorcyclist',
-    description: 'One Motorcyclist is removed; Hook is shuffled in its place.',
+    label: 'Hook instead of a Biker',
+    description: 'One Biker is removed; Hook is shuffled in its place.',
   },
 ];

@@ -28,7 +28,7 @@ export const troglodytes: Army = {
     { id: 'trog-battle', name: 'Battle', category: 'instant', count: 7, imageUrl: imgBitwa },
     { id: 'trog-move', name: 'Move', category: 'instant', count: 3, imageUrl: imgRuch },
     { id: 'trog-avalanche', name: 'Avalanche', category: 'instant', count: 1, imageUrl: imgLawina },
-    { id: 'trog-cannibalize', name: 'Cannibalize Enemy', category: 'instant', count: 1, imageUrl: imgSkanibalizowanieWroga },
+    { id: 'trog-cannibalize', name: 'Cannibalize the Enemy', category: 'instant', count: 1, imageUrl: imgSkanibalizowanieWroga },
     { id: 'trog-frost', name: 'Frost', category: 'soldier', count: 2, imageUrl: imgFrost },
 
     // Soldiers
@@ -36,7 +36,7 @@ export const troglodytes: Army = {
     { id: 'trog-tundra', name: 'Tundra', category: 'soldier', count: 4, imageUrl: imgTundra },
     { id: 'trog-icicle', name: 'Icicle', category: 'soldier', count: 5, imageUrl: imgSopel },
     { id: 'trog-bear', name: 'Bear', category: 'soldier', count: 3, imageUrl: imgNiedzwiedz },
-    { id: 'trog-frost-matron', name: 'Frost Matron', category: 'soldier', count: 2, imageUrl: imgMroznaMatrona },
+    { id: 'trog-frost-matron', name: 'Icy Mistress', category: 'soldier', count: 2, imageUrl: imgMroznaMatrona },
     { id: 'trog-ice-monkey', name: 'Ice Monkey', category: 'soldier', count: 2, imageUrl: imgLodowaMalpa },
     { id: 'trog-kids', name: 'Kids', category: 'soldier', count: 2, imageUrl: imgDzieciaki },
   ],
