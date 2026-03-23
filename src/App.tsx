@@ -6,9 +6,10 @@ import { ArmyView } from './components/ArmyView';
 import { CounterMode } from './components/CounterMode';
 import { DeckSetup } from './components/DeckSetup';
 import { DrawMode } from './components/DrawMode';
+import { TileFlipMode } from './components/TileFlipMode';
 
 type Screen = 'home' | 'army' | 'setup' | 'draw' | 'counter';
-type FeatureMode = 'randomizer' | 'counter';
+type FeatureMode = 'randomizer' | 'counter' | 'tileflip';
 
 export default function App() {
   const [screen, setScreen] = useState<Screen>('home');
@@ -166,11 +167,11 @@ function HomeScreen({
       </div>
 
       {/* Feature selector */}
-      <div className="flex gap-3 justify-center">
+      <div className="flex flex-wrap gap-2 sm:gap-3 justify-center">
         <button
           onClick={() => onFeatureModeChange('randomizer')}
           className={[
-            'px-6 py-3 rounded-xl font-semibold text-base transition-all duration-200 border',
+            'px-4 sm:px-6 py-3 rounded-xl font-semibold text-sm sm:text-base transition-all duration-200 border',
             featureMode === 'randomizer'
               ? 'bg-stone-700 border-stone-500 text-stone-100'
               : 'border-stone-700 text-stone-500 hover:border-stone-600 hover:text-stone-300',
@@ -181,7 +182,7 @@ function HomeScreen({
         <button
           onClick={() => onFeatureModeChange('counter')}
           className={[
-            'px-6 py-3 rounded-xl font-semibold text-base transition-all duration-200 border',
+            'px-4 sm:px-6 py-3 rounded-xl font-semibold text-sm sm:text-base transition-all duration-200 border',
             featureMode === 'counter'
               ? 'bg-stone-700 border-stone-500 text-stone-100'
               : 'border-stone-700 text-stone-500 hover:border-stone-600 hover:text-stone-300',
@@ -189,31 +190,48 @@ function HomeScreen({
         >
           📋 Tile Counter
         </button>
-      </div>
-
-      <div className="space-y-2">
-        <p className="text-stone-500 text-sm text-center">
-          {featureMode === 'randomizer'
-            ? 'Draw tiles one by one using a shareable deck code — so all players draw in the same order.'
-            : 'Manually count tiles by clicking to move them between Remaining and Drawn.'}
-        </p>
-      </div>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        {armies.map((army) => (
-          <ArmyCard key={army.id} army={army} onClick={() => onSelectArmy(army)} />
-        ))}
-        <a
-          href="https://www.siepomaga.pl/na-pomoc-dla-julki"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="rounded-2xl border border-dashed border-stone-600 p-6 flex flex-col items-center justify-center text-center text-stone-400 hover:border-stone-500 hover:text-stone-300 transition-all duration-200 group"
+        <button
+          onClick={() => onFeatureModeChange('tileflip')}
+          className={[
+            'px-4 sm:px-6 py-3 rounded-xl font-semibold text-sm sm:text-base transition-all duration-200 border',
+            featureMode === 'tileflip'
+              ? 'bg-stone-700 border-stone-500 text-stone-100'
+              : 'border-stone-700 text-stone-500 hover:border-stone-600 hover:text-stone-300',
+          ].join(' ')}
         >
-          <span className="text-sm font-medium group-hover:underline">
-            Enjoying the app? Join Partisants today
-          </span>
-        </a>
+          🪙 Tile flip
+        </button>
       </div>
+
+      {featureMode === 'tileflip' ? (
+        <TileFlipMode />
+      ) : (
+        <>
+          <div className="space-y-2">
+            <p className="text-stone-500 text-sm text-center">
+              {featureMode === 'randomizer'
+                ? 'Draw tiles one by one using a shareable deck code — so all players draw in the same order.'
+                : 'Manually count tiles by clicking to move them between Remaining and Drawn.'}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {armies.map((army) => (
+              <ArmyCard key={army.id} army={army} onClick={() => onSelectArmy(army)} />
+            ))}
+            <a
+              href="https://www.siepomaga.pl/na-pomoc-dla-julki"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-2xl border border-dashed border-stone-600 p-6 flex flex-col items-center justify-center text-center text-stone-400 hover:border-stone-500 hover:text-stone-300 transition-all duration-200 group"
+            >
+              <span className="text-sm font-medium group-hover:underline">
+                Enjoying the app? Join Partisants today
+              </span>
+            </a>
+          </div>
+        </>
+      )}
     </div>
   );
 }
