@@ -2,6 +2,12 @@ import { useState, useCallback, useMemo } from 'react';
 import type { Army, TileCategory, TileDefinition } from '../data/types';
 import type { TileInstance } from '../utils/deck';
 import { buildDeck } from '../utils/deck';
+import {
+  WIREMEN_TECH_BONUS_LABELS,
+  WIREMEN_TECH_BONUS_ORDER,
+  wiremenTechBonusesFullDeck,
+  wiremenTechBonusesRemaining,
+} from '../utils/wiremenTechBonuses';
 import { TileCard } from './TileCard';
 
 const CATEGORY_ORDER: Record<TileCategory, number> = {
@@ -134,6 +140,15 @@ export function CounterMode({ army, onBack }: CounterModeProps) {
     return DECK_CATEGORIES.filter((cat) => totals[cat] > 0);
   }, [army]);
 
+  const wiremenTechRemaining = useMemo(
+    () => (army.id === 'wiremen' ? wiremenTechBonusesRemaining(remaining) : null),
+    [army.id, remaining]
+  );
+  const wiremenTechFull = useMemo(
+    () => (army.id === 'wiremen' ? wiremenTechBonusesFullDeck() : null),
+    [army.id]
+  );
+
   return (
     <div className="max-w-4xl mx-auto px-4 py-8 space-y-6">
       {/* Header row */}
@@ -169,6 +184,7 @@ export function CounterMode({ army, onBack }: CounterModeProps) {
         <p className="text-stone-500 text-sm mt-2">
           Click a tile to move it between Remaining and Drawn.
         </p>
+
         <label className="mt-4 flex items-center gap-2.5 cursor-pointer select-none text-sm text-stone-300 hover:text-stone-100">
           <input
             type="checkbox"
@@ -232,6 +248,34 @@ export function CounterMode({ army, onBack }: CounterModeProps) {
               >
                 {CATEGORY_LABELS[cat]} — {tiles.length} remaining
               </h3>
+              {cat === 'instant' && army.id === 'wiremen' && wiremenTechRemaining && wiremenTechFull && (
+                <div className="mb-3 rounded-xl border border-teal-500/25 bg-teal-950/20 px-4 py-3">
+                  <p className="text-teal-300/90 text-xs font-semibold uppercase tracking-wider mb-2">
+                    Technology — remaining bonuses
+                  </p>
+                  <p className="text-stone-500 text-xs mb-3 leading-relaxed">
+                    Total bonus pool from Technology (instant) tiles still in Remaining. Moving a tile to Drawn
+                    reduces the bonuses it contributed.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {WIREMEN_TECH_BONUS_ORDER.map((key) => {
+                      const cur = wiremenTechRemaining[key];
+                      const max = wiremenTechFull[key];
+                      if (max === 0) return null;
+                      return (
+                        <span
+                          key={key}
+                          className="inline-flex items-baseline gap-1 rounded-lg border border-teal-600/35 bg-stone-900/60 px-2.5 py-1.5 text-sm"
+                        >
+                          <span className="text-stone-300">{WIREMEN_TECH_BONUS_LABELS[key]}</span>
+                          <span className="font-bold tabular-nums text-teal-200">{cur}</span>
+                          <span className="text-stone-600 text-xs">/ {max}</span>
+                        </span>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 mt-2">
                 {(stackIdentical
                   ? sortGroupsByCategory(groupInstancesByTileId(tiles))
