@@ -43,8 +43,8 @@ export const pirates: Army = {
     { id: 'pirates-crocodile', name: 'Crocodile', category: 'soldier', count: 2, imageUrl: imgKrokodyl },
     { id: 'pirates-helmsman', name: 'Helmsman', category: 'soldier', count: 3, imageUrl: imgSternik },
     { id: 'pirates-smuggler', name: 'Smuggler', category: 'soldier', count: 3, imageUrl: imgSzmugler },
-    { id: 'pirates-boatswain', name: 'Boatswain', category: 'soldier', count: 1, imageUrl: imgBosman },
-    { id: 'pirates-water-cannon', name: 'Water Cannon', category: 'soldier', count: 1, imageUrl: imgDzialkoWodne },
+    { id: 'pirates-boatswain', name: 'Bossman', category: 'soldier', count: 1, imageUrl: imgBosman },
+    { id: 'pirates-water-cannon', name: 'Water Gun', category: 'soldier', count: 1, imageUrl: imgDzialkoWodne },
 
     // Modules
     { id: 'pirates-mother', name: 'Mother', category: 'module', count: 2, imageUrl: imgMatka },
