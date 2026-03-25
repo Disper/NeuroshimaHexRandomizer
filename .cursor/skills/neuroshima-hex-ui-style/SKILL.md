@@ -1,13 +1,13 @@
 ---
 name: neuroshima-hex-ui-style
 description: >-
-  Applies the Neuroshima Hex Randomizer UI conventions — dark stone palette, army accent colors,
+  Applies the Neuroshima Hex Toolbox UI conventions — dark stone palette, army accent colors,
   tile category chrome, card shells, and typography. Use when building or restyling React/Tailwind
   components in this repo, adding new screens, or matching existing ArmyView / TileCard / CounterMode
   patterns.
 ---
 
-# Neuroshima Hex Randomizer — UI design style
+# Neuroshima Hex Toolbox — UI design style
 
 Stack: **React**, **Tailwind CSS v4** (`@import "tailwindcss"` in `src/index.css`), no separate design-system package.
 

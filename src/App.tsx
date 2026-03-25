@@ -49,8 +49,8 @@ export default function App() {
             className="flex items-center gap-2 font-bold text-stone-100 hover:text-white transition-colors"
           >
             <span className="text-lg">🎲</span>
-            <span className="hidden sm:inline">Neuroshima Hex Randomizer</span>
-            <span className="sm:hidden">NH Randomizer</span>
+            <span className="hidden sm:inline">Neuroshima Hex Toolbox</span>
+            <span className="sm:hidden">NH Toolbox</span>
           </button>
 
           {selectedArmy && (
