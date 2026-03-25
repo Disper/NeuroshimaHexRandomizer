@@ -13,13 +13,20 @@ import { TileCard } from './TileCard';
 /** Three columns below lg (narrower on phones); four from lg up; slightly tighter gap on small screens */
 const COUNTER_TILE_GRID = 'grid grid-cols-3 lg:grid-cols-4 gap-1.5 sm:gap-2';
 
+/**
+ * Side-by-side armies: desktop (lg+) or phone/tablet held horizontally once wide enough.
+ * Without the landscape clause, phones stay stacked because width stays under 1024px.
+ */
+const COUNTER_WIDE_LAYOUT_MQ =
+  '(min-width: 1024px), (orientation: landscape) and (min-width: 560px)';
+
 /** Single layout branch — avoids duplicate tile grids in the DOM */
-function useMinWidthLg(): boolean {
+function useCounterWideLayout(): boolean {
   const [wide, setWide] = useState(() =>
-    typeof window !== 'undefined' ? window.matchMedia('(min-width: 1024px)').matches : false
+    typeof window !== 'undefined' ? window.matchMedia(COUNTER_WIDE_LAYOUT_MQ).matches : false
   );
   useEffect(() => {
-    const mq = window.matchMedia('(min-width: 1024px)');
+    const mq = window.matchMedia(COUNTER_WIDE_LAYOUT_MQ);
     const fn = () => setWide(mq.matches);
     mq.addEventListener('change', fn);
     return () => mq.removeEventListener('change', fn);
@@ -444,9 +451,10 @@ export function CounterMode({ armies, onBack }: CounterModeProps) {
     setDrawn1([]);
   }, [army0, army1]);
 
-  const wideLayout = useMinWidthLg();
+  const wideLayout = useCounterWideLayout();
 
-  const colClass = 'min-w-0 lg:border-l lg:border-stone-800 lg:pl-8';
+  /** Second column when wide branch is active (includes landscape phone; always 2-col there) */
+  const colClass = 'min-w-0 border-l border-stone-800 pl-8';
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-8 space-y-6">
@@ -484,10 +492,10 @@ export function CounterMode({ armies, onBack }: CounterModeProps) {
         </label>
       </div>
 
-      {/* Narrow: full first army, then full second; wide: side-by-side category alignment */}
+      {/* Stacked portrait phone; wide: side-by-side (desktop lg+ or landscape with room) */}
       {wideLayout ? (
       <div className="space-y-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+        <div className="grid grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
           <CounterArmySummary army={army0} remaining={remaining0} drawn={drawn0} />
           <div className={colClass}>
             <CounterArmySummary army={army1} remaining={remaining1} drawn={drawn1} />
@@ -495,7 +503,7 @@ export function CounterMode({ armies, onBack }: CounterModeProps) {
         </div>
 
         <div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-start">
+          <div className="grid grid-cols-2 gap-4 sm:gap-6 lg:gap-8 items-start">
             <div className="min-w-0">
               <DrawnFoldable
                 drawn={drawn0}
@@ -514,7 +522,7 @@ export function CounterMode({ armies, onBack }: CounterModeProps) {
         </div>
 
         <div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-start mb-6">
+          <div className="grid grid-cols-2 gap-4 sm:gap-6 lg:gap-8 items-start mb-6">
             <h3 className="text-base font-semibold text-stone-400">
               Remaining ({remaining0.length})
             </h3>
@@ -527,7 +535,7 @@ export function CounterMode({ armies, onBack }: CounterModeProps) {
             {categoriesInEitherDeck.map((cat) => (
               <div
                 key={cat}
-                className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-start border-t border-stone-800/80 pt-6 first:border-t-0 first:pt-0"
+                className="grid grid-cols-2 gap-4 sm:gap-6 lg:gap-8 items-start border-t border-stone-800/80 pt-6 first:border-t-0 first:pt-0"
               >
                 <CategoryRemainingBlock
                   army={army0}
