@@ -142,6 +142,52 @@ function deckTotalsByCategory(army: Army): Record<Exclude<TileCategory, 'hq'>, n
   return counts;
 }
 
+function WiremenTechRemainingBlock({
+  army,
+  remaining,
+}: {
+  army: Army;
+  remaining: TileInstance[];
+}) {
+  const { t } = useLocale();
+  const wiremenTechRemaining = useMemo(
+    () => (army.id === 'wiremen' ? wiremenTechBonusesRemaining(remaining) : null),
+    [army.id, remaining]
+  );
+  const wiremenTechFull = useMemo(
+    () => (army.id === 'wiremen' ? wiremenTechBonusesFullDeck() : null),
+    [army.id]
+  );
+
+  if (army.id !== 'wiremen' || !wiremenTechRemaining || !wiremenTechFull) return null;
+
+  return (
+    <div className="mb-6 rounded-xl border border-teal-500/25 bg-teal-950/20 px-4 py-3">
+      <p className="text-teal-300/90 text-xs font-semibold uppercase tracking-wider mb-2">
+        {t('counterWiremenTechTitle')}
+      </p>
+      <p className="text-stone-500 text-xs mb-3 leading-relaxed">{t('counterWiremenTechBlurb')}</p>
+      <div className="flex flex-wrap gap-2">
+        {WIREMEN_TECH_BONUS_ORDER.map((key) => {
+          const cur = wiremenTechRemaining[key];
+          const max = wiremenTechFull[key];
+          if (max === 0) return null;
+          return (
+            <span
+              key={key}
+              className="inline-flex items-baseline gap-1 rounded-lg border border-teal-600/35 bg-stone-900/60 px-2.5 py-1.5 text-sm"
+            >
+              <span className="text-stone-300">{t(WIREMEN_BONUS_KEY[key])}</span>
+              <span className="font-bold tabular-nums text-teal-200">{cur}</span>
+              <span className="text-stone-600 text-xs">/ {max}</span>
+            </span>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
 function CounterArmySummary({
   army,
   remaining,
@@ -296,14 +342,6 @@ function CategoryRemainingBlock({
 }) {
   const { t } = useLocale();
   const deckTotals = useMemo(() => deckTotalsByCategory(army), [army]);
-  const wiremenTechRemaining = useMemo(
-    () => (army.id === 'wiremen' ? wiremenTechBonusesRemaining(remaining) : null),
-    [army.id, remaining]
-  );
-  const wiremenTechFull = useMemo(
-    () => (army.id === 'wiremen' ? wiremenTechBonusesFullDeck() : null),
-    [army.id]
-  );
 
   if (deckTotals[category] === 0) {
     return (
@@ -328,31 +366,6 @@ function CategoryRemainingBlock({
           n: tiles.length,
         })}
       </h4>
-      {category === 'instant' && army.id === 'wiremen' && wiremenTechRemaining && wiremenTechFull && (
-        <div className="mb-3 rounded-xl border border-teal-500/25 bg-teal-950/20 px-4 py-3">
-          <p className="text-teal-300/90 text-xs font-semibold uppercase tracking-wider mb-2">
-            {t('counterWiremenTechTitle')}
-          </p>
-          <p className="text-stone-500 text-xs mb-3 leading-relaxed">{t('counterWiremenTechBlurb')}</p>
-          <div className="flex flex-wrap gap-2">
-            {WIREMEN_TECH_BONUS_ORDER.map((key) => {
-              const cur = wiremenTechRemaining[key];
-              const max = wiremenTechFull[key];
-              if (max === 0) return null;
-              return (
-                <span
-                  key={key}
-                  className="inline-flex items-baseline gap-1 rounded-lg border border-teal-600/35 bg-stone-900/60 px-2.5 py-1.5 text-sm"
-                >
-                  <span className="text-stone-300">{t(WIREMEN_BONUS_KEY[key])}</span>
-                  <span className="font-bold tabular-nums text-teal-200">{cur}</span>
-                  <span className="text-stone-600 text-xs">/ {max}</span>
-                </span>
-              );
-            })}
-          </div>
-        </div>
-      )}
       <div className={`${COUNTER_TILE_GRID} mt-2`}>
         {(stackIdentical
           ? sortGroupsByCategory(groupInstancesByTileId(tiles))
@@ -411,17 +424,17 @@ function CounterArmyFullPanel({
         </h3>
         <div className="space-y-8">
           {categories.map((cat) => (
-            <div
-              key={cat}
-              className="border-t border-stone-800/80 pt-6 first:border-t-0 first:pt-0"
-            >
-              <CategoryRemainingBlock
-                army={army}
-                category={cat}
-                remaining={remaining}
-                stackIdentical={stackIdentical}
-                onRemainingClick={onRemainingClick}
-              />
+            <div key={cat}>
+              {cat === 'instant' ? <WiremenTechRemainingBlock army={army} remaining={remaining} /> : null}
+              <div className="border-t border-stone-800/80 pt-6 first:border-t-0 first:pt-0">
+                <CategoryRemainingBlock
+                  army={army}
+                  category={cat}
+                  remaining={remaining}
+                  stackIdentical={stackIdentical}
+                  onRemainingClick={onRemainingClick}
+                />
+              </div>
             </div>
           ))}
         </div>
@@ -558,25 +571,32 @@ export function CounterMode({ armies, onBack }: CounterModeProps) {
 
           <div className="space-y-8">
             {categoriesInEitherDeck.map((cat) => (
-              <div
-                key={cat}
-                className="grid grid-cols-2 gap-4 sm:gap-6 lg:gap-8 items-start border-t border-stone-800/80 pt-6 first:border-t-0 first:pt-0"
-              >
-                <CategoryRemainingBlock
-                  army={army0}
-                  category={cat}
-                  remaining={remaining0}
-                  stackIdentical={stackIdentical}
-                  onRemainingClick={handleRemaining0}
-                />
-                <div className={colClass}>
+              <div key={cat}>
+                {cat === 'instant' ? (
+                  <div className="grid grid-cols-2 gap-4 sm:gap-6 lg:gap-8 items-start mb-6">
+                    <WiremenTechRemainingBlock army={army0} remaining={remaining0} />
+                    <div className={colClass}>
+                      <WiremenTechRemainingBlock army={army1} remaining={remaining1} />
+                    </div>
+                  </div>
+                ) : null}
+                <div className="grid grid-cols-2 gap-4 sm:gap-6 lg:gap-8 items-start border-t border-stone-800/80 pt-6 first:border-t-0 first:pt-0">
                   <CategoryRemainingBlock
-                    army={army1}
+                    army={army0}
                     category={cat}
-                    remaining={remaining1}
+                    remaining={remaining0}
                     stackIdentical={stackIdentical}
-                    onRemainingClick={handleRemaining1}
+                    onRemainingClick={handleRemaining0}
                   />
+                  <div className={colClass}>
+                    <CategoryRemainingBlock
+                      army={army1}
+                      category={cat}
+                      remaining={remaining1}
+                      stackIdentical={stackIdentical}
+                      onRemainingClick={handleRemaining1}
+                    />
+                  </div>
                 </div>
               </div>
             ))}
